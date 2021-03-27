@@ -4,7 +4,7 @@ namespace Behaviours.Player
 {
     public class PacmanMove : MonoBehaviour 
     {
-        public float speed = 4.0f;
+        [SerializeField] public float speed = 4.0f;
         private Vector2 _direction = Vector2.zero;
         
         void Update()
