@@ -5,13 +5,13 @@ using UnityEngine;
 public class GameBoard : MonoBehaviour
 {
     //number of units
-    private const int BoardWidth = 27;
-    private const int BoardHeight = 30;
+    private const int BoardWidth = 31;
+    private const int BoardHeight = 31;
 
-    public GameObject[,] board = new GameObject[BoardWidth, BoardHeight];
+    public readonly GameObject[,] Board = new GameObject[BoardWidth, BoardHeight];
     
     // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         var gameObjects = GameObject.FindObjectsOfType(typeof(GameObject));
 
@@ -19,10 +19,10 @@ public class GameBoard : MonoBehaviour
         {
             var go = (GameObject) o;
             Vector2 position = go.transform.position;
-
+            
             if (go.name != "pacman")
             {
-                board[(int) position.x, (int) position.y] = go;
+                Board[(int) position.x, (int) position.y] = go;
             }
             else
             {
