@@ -4,22 +4,21 @@ using UnityEngine;
 public class PacmanMove : MonoBehaviour 
 {
     [SerializeField] public float speed = 4.0f;
-    [SerializeField] public Sprite nonMovingPacman;
-    
+
     private Vector2 _direction = Vector2.zero;
     private Vector2 _nextDirection;
     private Node _previousNode, _currentNode, _targetNode;
     private GameBoard _gameBoard;
-    
-    private Animator _animator;
-    private SpriteRenderer _spriteRenderer;
+    private Orientation _pacmanOrientation;
+    private PacmanAnimation _animation;
+    private Consume _consumePellet;
 
-    //MOVING
     private void Start()
     {
-        _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
         _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
+        _pacmanOrientation = GetComponent<Orientation>();
+        _animation = GetComponent<PacmanAnimation>();
+        _consumePellet = GetComponent<Consume>();
         
         //pacman position
         var node = GetNodeAtPosition(transform.localPosition);
@@ -39,9 +38,9 @@ public class PacmanMove : MonoBehaviour
     {
         CheckInput();
         Move();
-        UpdateOrientation();
-        UpdateAnimation();
-        ConsumePellet();
+        _pacmanOrientation.UpdateOrientation(_direction);
+        _animation.UpdateAnimation(_direction);
+        _consumePellet.ConsumePellet(_gameBoard);
     }
 
     private void CheckInput()
@@ -181,72 +180,5 @@ public class PacmanMove : MonoBehaviour
         var nodeToSelf = LengthFromNode(transform.localPosition);
 
         return nodeToSelf > nodeToTarget;
-    }
-
-    //ORIENTATION
-    private void UpdateOrientation()
-    {
-        if (_direction == Vector2.left)
-        {
-            transform.localScale = new Vector3(-1, 1, 1);
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-        else if (_direction == Vector2.right)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-            transform.localRotation = Quaternion.Euler(0, 0, 0);
-        }
-        else if (_direction == Vector2.up)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-            transform.localRotation = Quaternion.Euler(0, 0, 90);
-        }
-        else if (_direction == Vector2.down)
-        {
-            transform.localScale = new Vector3(1, 1, 1);
-            transform.localRotation = Quaternion.Euler(0, 0, 270);
-        }
-    }
-
-    //ANIMATION
-    private void UpdateAnimation()
-    {
-        //pacman not moving
-        if (_direction == Vector2.zero)
-        {
-            _animator.enabled = false;
-            _spriteRenderer.sprite = nonMovingPacman;
-        }
-        else
-        {
-            _animator.enabled = true;
-        }
-    }
-
-    //CONSUME PELLETS
-    private GameObject GetTileAtPosition(Vector2 position)
-    {
-        var tileX = Mathf.RoundToInt(position.x);
-        var tileY = Mathf.RoundToInt(position.y);
-        var tile = _gameBoard.Board[tileX, tileY];
-
-        return tile;
-    }
-
-    private void ConsumePellet()
-    {
-        var tileObject = GetTileAtPosition(transform.position);
-
-        if (ReferenceEquals(tileObject, null)) return;
-        
-        var tile = tileObject.GetComponent<Tile>();
-
-        if (ReferenceEquals(tile, null)) return;
-
-        if (!tile.consumed && (tile.isPellet || tile.isSuperPellet))
-        {
-            tileObject.GetComponent<SpriteRenderer>().enabled = false;
-            tile.consumed = true;
-        }
     }
 }
