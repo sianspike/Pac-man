@@ -1,34 +1,26 @@
+using System;
 using JetBrains.Annotations;
 using UnityEngine;
 
-public class PacmanMove : MonoBehaviour 
+public class Move : MonoBehaviour 
 {
     [SerializeField] public float speed = 4.0f;
-
+    
     private Vector2 _direction = Vector2.zero;
     private Vector2 _nextDirection;
-    private Node _previousNode, _currentNode, _targetNode;
+    private Node _previousNode, _targetNode, _currentNode;
     private GameBoard _gameBoard;
-    private Orientation _pacmanOrientation;
-    private PacmanAnimation _animation;
-    private Consume _consumePellet;
 
     private void Start()
     {
         _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
-        _pacmanOrientation = GetComponent<Orientation>();
-        _animation = GetComponent<PacmanAnimation>();
-        _consumePellet = GetComponent<Consume>();
         
         //pacman position
-        var node = GetNodeAtPosition(transform.localPosition);
+        var node = GetNodeAtPosition(transform.localPosition, _gameBoard);
 
         if (node == null) return;
         
         _currentNode = node;
-        
-        Debug.Log(_currentNode);
-
         _direction = Vector2.right;
         
         ChangePosition(_direction);
@@ -37,10 +29,6 @@ public class PacmanMove : MonoBehaviour
     private void Update()
     {
         CheckInput();
-        Move();
-        _pacmanOrientation.UpdateOrientation(_direction);
-        _animation.UpdateAnimation(_direction);
-        _consumePellet.ConsumePellet(_gameBoard);
     }
 
     private void CheckInput()
@@ -62,10 +50,10 @@ public class PacmanMove : MonoBehaviour
             ChangePosition(Vector2.down);
         }
     }
-
-    private void Move()
+    
+    public Vector2 MoveSprite()
     {
-        if (_targetNode == _currentNode || ReferenceEquals(_targetNode, null)) return;
+        if (_targetNode == _currentNode || ReferenceEquals(_targetNode, null)) return default;
 
         //if pacman wants to move in opposite direction before node is reached
         if (_nextDirection == _direction * -1)
@@ -110,11 +98,13 @@ public class PacmanMove : MonoBehaviour
         {
             transform.localPosition += (Vector3) (_direction * speed) * Time.deltaTime;
         }
+
+        return _direction;
     }
     
-    private Node GetNodeAtPosition(Vector2 position)
+    private Node GetNodeAtPosition(Vector2 position, GameBoard gameBoard)
     {
-        var tile = _gameBoard.Board[(int) position.x, (int) position.y];
+        var tile = gameBoard.Board[(int) position.x, (int) position.y];
 
         return tile != null ? tile.GetComponent<Node>() : null;
     }
@@ -155,16 +145,18 @@ public class PacmanMove : MonoBehaviour
             _nextDirection = targetDirection;
         }
 
-        if (ReferenceEquals(_currentNode, null)) return;
-        
-        var moveToNode = CanMove(targetDirection);
+        if (!ReferenceEquals(_currentNode, null))
+        {
+            var moveToNode = CanMove(targetDirection);
 
-        if (ReferenceEquals(moveToNode, null)) return;
-            
-        _direction = targetDirection;
-        _targetNode = moveToNode;
-        _previousNode = _currentNode;
-        _currentNode = null;
+            if (!ReferenceEquals(moveToNode, null))
+            {
+                _direction = targetDirection;
+                _targetNode = moveToNode;
+                _previousNode = _currentNode;
+                _currentNode = null;
+            }
+        }
     }
     
     private float LengthFromNode(Vector2 targetPosition)
