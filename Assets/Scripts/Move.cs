@@ -10,48 +10,48 @@ public class Move : MonoBehaviour
     private Vector2 _nextDirection;
     private Node _previousNode, _targetNode, _currentNode;
     private GameBoard _gameBoard;
+    private GameObject _pacman;
 
     private void Start()
     {
         _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
-        
-        //pacman position
-        var node = GetNodeAtPosition(transform.localPosition, _gameBoard);
+        _pacman = GameObject.FindGameObjectWithTag("pacman");
+
+        var node = GetNodeAtPosition(transform.position, _gameBoard);
 
         if (node == null) return;
         
         _currentNode = node;
+        _previousNode = _currentNode;
         _direction = Vector2.right;
-        
-        ChangePosition(_direction);
     }
 
-    private void Update()
+    public void SetTargetNode(Node target)
     {
-        CheckInput();
+        _targetNode = target;
     }
 
-    private void CheckInput()
+    public void CheckInput()
     {
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            ChangePosition(Vector2.left);
+            ChangePacmanPosition(Vector2.left);
         } 
         else if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            ChangePosition(Vector2.right);
+            ChangePacmanPosition(Vector2.right);
         }
         else if (Input.GetKeyDown(KeyCode.UpArrow))
         {
-            ChangePosition(Vector2.up);
+            ChangePacmanPosition(Vector2.up);
         }
         else if (Input.GetKeyDown(KeyCode.DownArrow))
         {
-            ChangePosition(Vector2.down);
+            ChangePacmanPosition(Vector2.down);
         }
     }
     
-    public Vector2 MoveSprite()
+    public Vector2 MovePacman()
     {
         if (_targetNode == _currentNode || ReferenceEquals(_targetNode, null)) return default;
 
@@ -70,19 +70,19 @@ public class Move : MonoBehaviour
         {
             _currentNode = _targetNode;
             transform.localPosition = _currentNode.transform.position;
-
-            var moveToNode = CanMove(_nextDirection);
-
+            
+            var moveToNode = PacmanCanMove(_nextDirection);
+            
             if (!ReferenceEquals(moveToNode, null))
             {
                 _direction = _nextDirection;
             }
-
+            
             if (ReferenceEquals(moveToNode, null))
             {
-                moveToNode = CanMove(_direction);
+                moveToNode = PacmanCanMove(_direction);
             }
-
+            
             if (!ReferenceEquals(moveToNode, null))
             {
                 _targetNode = moveToNode;
@@ -101,15 +101,15 @@ public class Move : MonoBehaviour
 
         return _direction;
     }
-    
-    private Node GetNodeAtPosition(Vector2 position, GameBoard gameBoard)
+
+    public static Node GetNodeAtPosition(Vector2 position, GameBoard gameBoard)
     {
         var tile = gameBoard.Board[(int) position.x, (int) position.y];
 
         return tile != null ? tile.GetComponent<Node>() : null;
     }
     
-    private Node CanMove(Vector2 direction)
+    private Node PacmanCanMove(Vector2 direction)
     {
         Node moveToNode = null;
 
@@ -127,18 +127,7 @@ public class Move : MonoBehaviour
         return moveToNode;
     }
     
-    private void MoveToNode(Vector2 direction)
-    {
-        var moveToNode = CanMove(direction);
-
-        if (moveToNode == null) return;
-        
-        //change pacman's position if he is able to move
-        transform.localPosition = moveToNode.transform.position;
-        _currentNode = moveToNode;
-    }
-    
-    private void ChangePosition(Vector2 targetDirection)
+    public void ChangePacmanPosition(Vector2 targetDirection)
     {
         if (targetDirection != _direction)
         {
@@ -147,7 +136,7 @@ public class Move : MonoBehaviour
 
         if (!ReferenceEquals(_currentNode, null))
         {
-            var moveToNode = CanMove(targetDirection);
+            var moveToNode = PacmanCanMove(targetDirection);
 
             if (!ReferenceEquals(moveToNode, null))
             {
@@ -172,5 +161,77 @@ public class Move : MonoBehaviour
         var nodeToSelf = LengthFromNode(transform.localPosition);
 
         return nodeToSelf > nodeToTarget;
+    }
+    
+    public void MoveGhost()
+    {
+        if (_targetNode == _currentNode || ReferenceEquals(_targetNode, null)) return;
+        if (OvershotTarget())
+        {
+            _currentNode = _targetNode;
+            transform.localPosition = _currentNode.transform.position;
+            _targetNode = ChooseNextNode();
+            _previousNode = _currentNode;
+            _currentNode = null;
+        }
+        else
+        {
+            transform.localPosition += (Vector3) _direction * (speed * Time.deltaTime); 
+        }
+    }
+    
+    private Node ChooseNextNode()
+    {
+        Vector2 pacmanPosition = _pacman.transform.position;
+        var targetTile = new Vector2(Mathf.RoundToInt(pacmanPosition.x), Mathf.RoundToInt(pacmanPosition.y));
+        Node moveToNode = null;
+        var foundNeighbours = new Node[4];
+        var foundNeighboursDirection = new Vector2[4];
+        var nodeCounter = 0;
+
+        for (var i = 0; i < _currentNode.neighbours.Length; i++)
+        {
+            if (_currentNode.validDirections[i] == _direction * -1) continue;
+            
+            foundNeighbours[nodeCounter] = _currentNode.neighbours[i];
+            foundNeighboursDirection[nodeCounter] = _currentNode.validDirections[i];
+            nodeCounter++;
+        }
+
+        if (foundNeighbours.Length == 1)
+        {
+            moveToNode = foundNeighbours[0];
+            _direction = foundNeighboursDirection[0];
+        }
+
+        if (foundNeighbours.Length > 1)
+        {
+            var leastDistance = 10000f;
+            
+            for (var i = 0; i < foundNeighbours.Length; i++)
+            {
+                if (foundNeighboursDirection[i] == Vector2.zero) continue;
+                
+                var distance = GetDistance(foundNeighbours[i].transform.localPosition, 
+                    targetTile);
+
+                if (!(distance < leastDistance)) continue;
+                    
+                leastDistance = distance;
+                moveToNode = foundNeighbours[i];
+                _direction = foundNeighboursDirection[i];
+            }
+        }
+
+        return moveToNode;
+    }
+    
+    private float GetDistance(Vector2 positionA, Vector2 positionB)
+    {
+        var xDistance = positionA.x - positionB.x;
+        var yDistance = positionA.y - positionB.y;
+        var distance = Mathf.Sqrt(xDistance * xDistance + yDistance * yDistance);
+
+        return distance;
     }
 }

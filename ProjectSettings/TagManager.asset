@@ -4,8 +4,7 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Enemy
-  - Maze
+  - pacman
   layers:
   - Default
   - TransparentFX

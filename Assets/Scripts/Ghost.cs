@@ -1,43 +1,43 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    [SerializeField] public float speed = 3.9f;
-
-    public Node startingPosition;
-
-    private int _scatterModeTimer1 = 7;
-    private int _chaseModeTimer1 = 20;
-    private int _scatterModeTimer2 = 7;
-    private int _chaseModeTimer2 = 20;
-    private int _scatterModeTimer3 = 5;
-    private int _chaseModeTimer3 = 20;
-    private int _scatterModeTimer4 = 5;
-    private int _chaseModeTimer4 = 20;
+    private const int ScatterModeTimer1 = 7;
+    private const int ChaseModeTimer1 = 20;
+    private const int ScatterModeTimer2 = 7;
+    private const int ChaseModeTimer2 = 20;
+    private const int ScatterModeTimer3 = 5;
+    private const int ChaseModeTimer3 = 20;
+    private const int ScatterModeTimer4 = 5;
     private int _modeChangeIteration = 1;
-    private float _modeChangeTimer = 0;
+    private float _modeChangeTimer;
     private Mode _currentMode = Mode.Scatter;
-    private Mode _previousMode;
+    private Move _ghostMovement;
     private GameObject _pacman;
-    private Node _currentNode, _targetNode, _previousNode;
-    private Vector2 _direction, _nextDirection;
     private GameBoard _gameBoard;
+    private Node _targetNode;
 
     private void Start()
     {
+        _pacman = GameObject.FindGameObjectWithTag("pacman");
         _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
+        _ghostMovement = GetComponent<Move>();
+
+        Vector2 pacmanPosition = _pacman.transform.position;
+        var targetTile = new Vector2(Mathf.RoundToInt(pacmanPosition.x), Mathf.RoundToInt(pacmanPosition.y));
+        
+        _targetNode = Move.GetNodeAtPosition(targetTile, _gameBoard);
+        
+        _ghostMovement.SetTargetNode(_targetNode);
     }
 
-    private Node GetNodeAtPosition(Vector2 position)
+    private void Update()
     {
-        var tile = _gameBoard.Board[(int) position.x, (int) position.y];
-        var node = tile.GetComponent<Node>();
-
-        if (tile == null) return null;
-        
-        return node != null ? node : null;
+        ModeUpdate();
+        _ghostMovement.MoveGhost();
     }
 
     private void ChangeMode(Mode mode)
@@ -47,23 +47,70 @@ public class Ghost : MonoBehaviour
 
     private void ModeUpdate()
     {
-        if (_currentMode == Mode.Frightened) return;
-        
-        _modeChangeTimer += Time.deltaTime;
-
-        if (_modeChangeIteration != 1) return;
-            
-        if (_currentMode == Mode.Scatter && _modeChangeTimer > _scatterModeTimer1)
+        if (_currentMode != Mode.Frightened)
         {
-            ChangeMode(Mode.Chase);
-            _modeChangeTimer = 0;
-        }
+            _modeChangeTimer += Time.deltaTime;
 
-        if (_currentMode != Mode.Chase || !(_modeChangeTimer > _chaseModeTimer1)) return;
+            switch (_modeChangeIteration)
+            {
+                case 1:
+                {
+                    if (_currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer1)
+                    {
+                        ChangeMode(Mode.Chase);
+                        _modeChangeTimer = 0;
+                    }
+
+                    if (_currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer1)) return;
+
+                    _modeChangeIteration = 2;
+                    ChangeMode(Mode.Scatter);
+                    _modeChangeTimer = 0;
+                    break;
+                }
+                case 2:
+                {
+                    if (_currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer2)
+                    {
+                        ChangeMode(Mode.Chase);
+                        _modeChangeTimer = 0;
+                    }
+
+                    if (_currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer2)) return;
                 
-        _modeChangeIteration = 2;
-        ChangeMode(Mode.Scatter);
-        _modeChangeTimer = 0;
+                    _modeChangeIteration = 3;
+                    ChangeMode(Mode.Scatter);
+                    _modeChangeTimer = 0;
+                    break;
+                }
+                case 3:
+                {
+                    if (_currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer3)
+                    {
+                        ChangeMode(Mode.Chase);
+                        _modeChangeTimer = 0;
+                    }
+
+                    if (_currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer3)) return;
+                
+                    _modeChangeIteration = 4;
+                    ChangeMode(Mode.Scatter);
+                    _modeChangeTimer = 0;
+                    break;
+                }
+                case 4 when _currentMode != Mode.Scatter || !(_modeChangeTimer > ScatterModeTimer4):
+                    return;
+                
+                case 4:
+                    ChangeMode(Mode.Chase);
+                    _modeChangeTimer = 0;
+                    break;
+            }
+        }
+        else if (_currentMode == Mode.Frightened)
+        {
+
+        }
     }
 }
 

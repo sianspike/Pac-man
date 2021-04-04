@@ -18,13 +18,17 @@ public class Pacman : MonoBehaviour
         _animation = GetComponent<PacmanAnimation>();
         _consumePellet = GetComponent<Consume>();
         _pacmanMovement = GetComponent<Move>();
+        
+        _pacmanMovement.ChangePacmanPosition(_direction);
     }
 
     private void Update()
     {
-        _direction = _pacmanMovement.MoveSprite();
+        _direction = _pacmanMovement.MovePacman();
         _pacmanOrientation.UpdateOrientation(_direction);
         _animation.UpdateAnimation(_direction);
         _consumePellet.ConsumePellet(_gameBoard);
+        
+        _pacmanMovement.CheckInput();
     }
 }

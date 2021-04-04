@@ -5628,6 +5628,8 @@ GameObject:
   - component: {fileID: 403276341}
   - component: {fileID: 403276340}
   - component: {fileID: 403276339}
+  - component: {fileID: 403276342}
+  - component: {fileID: 403276343}
   m_Layer: 0
   m_Name: blinky
   m_TagString: Untagged
@@ -5714,12 +5716,37 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403276338}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 14.7, y: 9.5, z: 0}
+  m_LocalPosition: {x: 10, y: 11, z: 51.96266}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &403276342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403276338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dd61d0efe2764426b49d4b9298bd1cf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &403276343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 403276338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4065cbbc507be45209f02e98106f2eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.9
 --- !u!1 &414403013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -31040,7 +31067,7 @@ PrefabInstance:
     - target: {fileID: 5856867997307157516, guid: 8653c69bff3734c1a8410c02c57f5eb5,
         type: 3}
       propertyPath: m_TagString
-      value: Untagged
+      value: pacman
       objectReference: {fileID: 0}
     - target: {fileID: 5856867997868802347, guid: 8653c69bff3734c1a8410c02c57f5eb5,
         type: 3}
