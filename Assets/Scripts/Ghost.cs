@@ -5,6 +5,9 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
+    public float ghostReleaseTimer = 0;
+    public int pinkyReleaseTimer = 5;
+
     private const int ScatterModeTimer1 = 7;
     private const int ChaseModeTimer1 = 20;
     private const int ScatterModeTimer2 = 7;
@@ -19,25 +22,22 @@ public class Ghost : MonoBehaviour
     private GameObject _pacman;
     private GameBoard _gameBoard;
     private Node _targetNode;
+    private Orientation _ghostOrientation;
+    private Vector2 _direction = Vector2.zero;
 
     private void Start()
     {
         _pacman = GameObject.FindGameObjectWithTag("pacman");
         _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
         _ghostMovement = GetComponent<Move>();
-
-        Vector2 pacmanPosition = _pacman.transform.position;
-        var targetTile = new Vector2(Mathf.RoundToInt(pacmanPosition.x), Mathf.RoundToInt(pacmanPosition.y));
-        
-        _targetNode = Move.GetNodeAtPosition(targetTile, _gameBoard);
-        
-        _ghostMovement.SetTargetNode(_targetNode);
+        _ghostOrientation = GetComponent<Orientation>();
     }
 
     private void Update()
     {
         ModeUpdate();
-        _ghostMovement.MoveGhost();
+        _direction = _ghostMovement.MoveGhost();
+        _ghostOrientation.UpdateOrientation(_direction);
     }
 
     private void ChangeMode(Mode mode)
@@ -119,4 +119,12 @@ public enum Mode
     Chase,
     Scatter,
     Frightened
+}
+
+public enum GhostType
+{
+    Blinky,
+    Pinky,
+    Inky,
+    Clyde
 }
