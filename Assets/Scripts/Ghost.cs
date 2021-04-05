@@ -2,12 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class Ghost : MonoBehaviour
 {
     [SerializeField] public GhostType ghostType = GhostType.Blinky;
     [SerializeField] public float ghostReleaseTimer = 0;
     [SerializeField] public int pinkyReleaseTimer = 5;
+    [SerializeField] public int inkyReleaseTimer = 14;
+    [SerializeField] public int clydeReleaseTimer = 21;
+    [SerializeField] public Node homeNode;
+    [SerializeField] public Mode currentMode = Mode.Scatter;
     
     private const int ScatterModeTimer1 = 7;
     private const int ChaseModeTimer1 = 20;
@@ -18,18 +23,13 @@ public class Ghost : MonoBehaviour
     private const int ScatterModeTimer4 = 5;
     private int _modeChangeIteration = 1;
     private float _modeChangeTimer;
-    private Mode _currentMode = Mode.Scatter;
     private Move _ghostMovement;
-    private GameObject _pacman;
-    private GameBoard _gameBoard;
     private Orientation _ghostOrientation;
     private Vector2 _direction = Vector2.zero;
-    public bool isInGhostHouse = false;
+    public bool isInGhostHouse;
 
     private void Start()
     {
-        _pacman = GameObject.FindGameObjectWithTag("pacman");
-        _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
         _ghostMovement = GetComponent<Move>();
         _ghostOrientation = GetComponent<Orientation>();
     }
@@ -44,12 +44,12 @@ public class Ghost : MonoBehaviour
 
     private void ChangeMode(Mode mode)
     {
-        _currentMode = mode;
+        currentMode = mode;
     }
 
     private void ModeUpdate()
     {
-        if (_currentMode != Mode.Frightened)
+        if (currentMode != Mode.Frightened)
         {
             _modeChangeTimer += Time.deltaTime;
 
@@ -57,13 +57,13 @@ public class Ghost : MonoBehaviour
             {
                 case 1:
                 {
-                    if (_currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer1)
+                    if (currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer1)
                     {
                         ChangeMode(Mode.Chase);
                         _modeChangeTimer = 0;
                     }
 
-                    if (_currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer1)) return;
+                    if (currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer1)) return;
 
                     _modeChangeIteration = 2;
                     ChangeMode(Mode.Scatter);
@@ -72,13 +72,13 @@ public class Ghost : MonoBehaviour
                 }
                 case 2:
                 {
-                    if (_currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer2)
+                    if (currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer2)
                     {
                         ChangeMode(Mode.Chase);
                         _modeChangeTimer = 0;
                     }
 
-                    if (_currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer2)) return;
+                    if (currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer2)) return;
                 
                     _modeChangeIteration = 3;
                     ChangeMode(Mode.Scatter);
@@ -87,20 +87,20 @@ public class Ghost : MonoBehaviour
                 }
                 case 3:
                 {
-                    if (_currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer3)
+                    if (currentMode == Mode.Scatter && _modeChangeTimer > ScatterModeTimer3)
                     {
                         ChangeMode(Mode.Chase);
                         _modeChangeTimer = 0;
                     }
 
-                    if (_currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer3)) return;
+                    if (currentMode != Mode.Chase || !(_modeChangeTimer > ChaseModeTimer3)) return;
                 
                     _modeChangeIteration = 4;
                     ChangeMode(Mode.Scatter);
                     _modeChangeTimer = 0;
                     break;
                 }
-                case 4 when _currentMode != Mode.Scatter || !(_modeChangeTimer > ScatterModeTimer4):
+                case 4 when currentMode != Mode.Scatter || !(_modeChangeTimer > ScatterModeTimer4):
                     return;
                 
                 case 4:
@@ -109,7 +109,7 @@ public class Ghost : MonoBehaviour
                     break;
             }
         }
-        else if (_currentMode == Mode.Frightened)
+        else if (currentMode == Mode.Frightened)
         {
 
         }

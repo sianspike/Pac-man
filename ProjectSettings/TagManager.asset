@@ -6,6 +6,7 @@ TagManager:
   tags:
   - pacman
   - ghost
+  - ghost_home
   layers:
   - Default
   - TransparentFX

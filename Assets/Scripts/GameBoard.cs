@@ -32,7 +32,7 @@ public class GameBoard : MonoBehaviour
             }
             
             if (go.name != "pacman" && go.name != "maze" && go.name != "nodes" && go.name != "non_nodes" &&
-                go.name != "pellets" && !go.CompareTag("ghost"))
+                go.name != "pellets" && !go.CompareTag("ghost") && !go.CompareTag("ghost_home"))
             {
                 Board[(int) position.x, (int) position.y] = go;
             }

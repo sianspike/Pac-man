@@ -201,7 +201,17 @@ public class Move : MonoBehaviour
     private Node ChooseNextNode()
     {
         Node moveToNode = null;
-        var targetTile = GetTargetTile();
+        var targetTile = Vector2.zero;
+
+        if (_ghost.currentMode == Mode.Chase)
+        {
+            targetTile = GetTargetTile();
+            
+        } else if (_ghost.currentMode == Mode.Scatter)
+        {
+            targetTile = _ghost.homeNode.transform.position;
+        }
+        
         var foundNeighbours = new Node[4];
         var foundNeighboursDirection = new Vector2[4];
         var nodeCounter = 0;
@@ -272,6 +282,48 @@ public class Move : MonoBehaviour
         return targetTile;
     }
 
+    private Vector2 GetInkyTargetTile()
+    {
+        //2 tiles ahead of pacman
+        Vector2 pacmanPosition = _pacman.transform.localPosition;
+        Vector2 blinkyPosition = _ghost.transform.localPosition;
+        var pacmanPositionX = Mathf.RoundToInt(pacmanPosition.x);
+        var pacmanPositionY = Mathf.RoundToInt(pacmanPosition.y);
+        var pacmanTile = new Vector2(pacmanPositionX, pacmanPositionY);
+        var targetTile = pacmanTile + (2 * pacmanPosition);
+        var blinkyPositionX = Mathf.RoundToInt(blinkyPosition.x);
+        var blinkyPositionY = Mathf.RoundToInt(blinkyPosition.y);
+
+        blinkyPosition = new Vector2(blinkyPositionX, blinkyPositionY);
+
+        var distance = GetDistance(blinkyPosition, targetTile);
+
+        distance *= 2;
+        targetTile = new Vector2(blinkyPosition.x + distance, blinkyPosition.y + distance);
+
+        return targetTile;
+    }
+
+    private Vector2 GetClydeTargetTile()
+    {
+        //same as Blinky unless less than 8 tiles away from pacman
+        Vector2 pacmanPosition = _pacman.transform.localPosition;
+        Vector2 clydePosition = _ghost.transform.localPosition;
+        var distance = GetDistance(clydePosition, pacmanPosition);
+        var targetTile = Vector2.zero;
+
+        if (distance > 8)
+        {
+            targetTile = new Vector2(Mathf.RoundToInt(pacmanPosition.x), Mathf.RoundToInt(pacmanPosition.y));
+            
+        } else if (distance < 8)
+        {
+            targetTile = _ghost.homeNode.transform.position;
+        }
+
+        return targetTile;
+    }
+
     private Vector2 GetTargetTile()
     {
         var targetTile = Vector2.zero;
@@ -283,6 +335,14 @@ public class Move : MonoBehaviour
         } else if (_ghost.ghostType == GhostType.Pinky)
         {
             targetTile = GetPinkyTargetTile();
+            
+        } else if (_ghost.ghostType == GhostType.Inky)
+        {
+            targetTile = GetInkyTargetTile();
+            
+        } else if (_ghost.ghostType == GhostType.Clyde)
+        {
+            targetTile = GetClydeTargetTile();
         }
 
         return targetTile;
@@ -296,6 +356,22 @@ public class Move : MonoBehaviour
         }
     }
 
+    private void ReleaseInky()
+    {
+        if (_ghost.ghostType == GhostType.Inky && _ghost.isInGhostHouse)
+        {
+            _ghost.isInGhostHouse = false;
+        }
+    }
+
+    private void ReleaseClyde()
+    {
+        if (_ghost.ghostType == GhostType.Clyde && _ghost.isInGhostHouse)
+        {
+            _ghost.isInGhostHouse = false;
+        }
+    }
+
     public void ReleaseGhosts()
     {
         _ghost.ghostReleaseTimer += Time.deltaTime;
@@ -303,6 +379,16 @@ public class Move : MonoBehaviour
         if (_ghost.ghostReleaseTimer > _ghost.pinkyReleaseTimer)
         {
             ReleasePinky();
+        }
+        
+        if (_ghost.ghostReleaseTimer > _ghost.inkyReleaseTimer)
+        {
+            ReleaseInky();
+        }
+        
+        if (_ghost.ghostReleaseTimer > _ghost.clydeReleaseTimer)
+        {
+            ReleaseClyde();
         }
     }
 }
