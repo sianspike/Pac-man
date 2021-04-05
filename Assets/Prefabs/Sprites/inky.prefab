@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 633151603218172382}
   - component: {fileID: 633151603218172383}
   - component: {fileID: 6368804230463214445}
+  - component: {fileID: 670327588}
+  - component: {fileID: 670327589}
   m_Layer: 0
   m_Name: inky
   m_TagString: ghost
@@ -98,6 +100,37 @@ MonoBehaviour:
   ghostType: 2
   ghostReleaseTimer: 0
   pinkyReleaseTimer: 5
+  inkyReleaseTimer: 14
+  clydeReleaseTimer: 21
   homeNode: {fileID: 0}
   currentMode: 1
+  ghostUp: {fileID: 9100000, guid: c354dcd5c04734f6995a253ad542a0f3, type: 2}
+  ghostDown: {fileID: 9100000, guid: 13d565c356f514809bb03699f7efa79c, type: 2}
+  ghostLeft: {fileID: 9100000, guid: 7f35bcf4967214d55b3abef0047dd3f2, type: 2}
+  ghostRight: {fileID: 9100000, guid: 8eaf676ad7564406889968f56b39a8b9, type: 2}
   isInGhostHouse: 1
+--- !u!114 &670327588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633151603218172376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4be4c748c9b45e7b096cea20c65ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &670327589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633151603218172376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4065cbbc507be45209f02e98106f2eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.9

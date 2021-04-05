@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6999473626826123138}
   - component: {fileID: 6999473626826123149}
   - component: {fileID: 1862658398809434899}
+  - component: {fileID: 388312935}
+  - component: {fileID: 388312936}
   m_Layer: 0
   m_Name: clyde
   m_TagString: ghost
@@ -98,6 +100,37 @@ MonoBehaviour:
   ghostType: 3
   ghostReleaseTimer: 0
   pinkyReleaseTimer: 5
+  inkyReleaseTimer: 14
+  clydeReleaseTimer: 21
   homeNode: {fileID: 0}
   currentMode: 1
+  ghostUp: {fileID: 9100000, guid: 7d72a5ebeee0b4abdb6f12d3bc02a926, type: 2}
+  ghostDown: {fileID: 9100000, guid: 28b3b56b7e51e4ff29c37c42b9c6cfbc, type: 2}
+  ghostLeft: {fileID: 9100000, guid: d80d19f6f5e3542f9b1143b402835ee0, type: 2}
+  ghostRight: {fileID: 9100000, guid: 7613825522a0c4b2784a3f446f134b4a, type: 2}
   isInGhostHouse: 1
+--- !u!114 &388312935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999473626826123148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e4be4c748c9b45e7b096cea20c65ec9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &388312936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999473626826123148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4065cbbc507be45209f02e98106f2eb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3.9

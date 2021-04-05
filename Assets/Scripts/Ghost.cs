@@ -13,7 +13,11 @@ public class Ghost : MonoBehaviour
     [SerializeField] public int clydeReleaseTimer = 21;
     [SerializeField] public Node homeNode;
     [SerializeField] public Mode currentMode = Mode.Scatter;
-    
+    [SerializeField] public RuntimeAnimatorController ghostUp;
+    [SerializeField] public RuntimeAnimatorController ghostDown;
+    [SerializeField] public RuntimeAnimatorController ghostLeft;
+    [SerializeField] public RuntimeAnimatorController ghostRight;
+
     private const int ScatterModeTimer1 = 7;
     private const int ChaseModeTimer1 = 20;
     private const int ScatterModeTimer2 = 7;
