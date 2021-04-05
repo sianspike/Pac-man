@@ -5,14 +5,13 @@ using UnityEngine;
 public class Move : MonoBehaviour 
 {
     [SerializeField] public float speed = 4.0f;
-    [SerializeField] public GhostType ghostType = GhostType.Blinky;
-    
+
     private Vector2 _direction = Vector2.zero;
     private Vector2 _nextDirection;
     private Node _previousNode, _targetNode, _currentNode;
     private GameBoard _gameBoard;
     private Pacman _pacman;
-    public bool isInGhostHouse = false;
+    private Ghost _ghost;
 
     private void Start()
     {
@@ -26,15 +25,23 @@ public class Move : MonoBehaviour
         _currentNode = node;
         _previousNode = _currentNode;
         
-        if (isInGhostHouse)
+        if (gameObject.CompareTag("ghost"))
         {
-            _direction = Vector2.up;
-            _targetNode = _currentNode.neighbours[0];
-        }
-        else
+            _ghost = gameObject.GetComponent<Ghost>();
+            
+            if (_ghost.isInGhostHouse)
+            {
+                _direction = Vector2.up;
+                _targetNode = _currentNode.neighbours[0];
+            } else
+            {
+                _direction = Vector2.right;
+                _targetNode = ChooseNextNode();
+            }
+        } else
         {
             _direction = Vector2.right;
-            _targetNode = ChooseNextNode();
+            _targetNode = PacmanCanMove(_direction);
         }
     }
 
@@ -172,19 +179,20 @@ public class Move : MonoBehaviour
     
     public Vector2 MoveGhost()
     {
-        if (_targetNode == _currentNode || ReferenceEquals(_targetNode, null)) return default;
-        
-        if (OvershotTarget())
+        if (_targetNode != _currentNode && !ReferenceEquals(_targetNode, null) && !_ghost.isInGhostHouse )
         {
-            _currentNode = _targetNode;
-            transform.localPosition = _currentNode.transform.position;
-            _targetNode = ChooseNextNode();
-            _previousNode = _currentNode;
-            _currentNode = null;
-        }
-        else
-        {
-            transform.localPosition += (Vector3) _direction * (speed * Time.deltaTime); 
+            if (OvershotTarget())
+            {
+                _currentNode = _targetNode;
+                transform.localPosition = _currentNode.transform.position;
+                _targetNode = ChooseNextNode();
+                _previousNode = _currentNode;
+                _currentNode = null;
+            }
+            else
+            {
+                transform.localPosition += (Vector3) _direction * (speed * Time.deltaTime); 
+            }
         }
         
         return _direction;
@@ -256,12 +264,10 @@ public class Move : MonoBehaviour
     {
         //4 tiles ahead of pacman
         Vector2 pacmanPosition = _pacman.transform.localPosition;
-        //could be wrong
-        Vector2 pacmanOrientation = _pacman.pacmanOrientation.transform.position;
         var pacmanPositionX = Mathf.RoundToInt(pacmanPosition.x);
         var pacmanPositionY = Mathf.RoundToInt(pacmanPosition.y);
         var pacmanTile = new Vector2(pacmanPositionX, pacmanPositionY);
-        var targetTile = pacmanTile + (4 * pacmanOrientation);
+        var targetTile = pacmanTile + (4 * pacmanPosition);
 
         return targetTile;
     }
@@ -270,15 +276,33 @@ public class Move : MonoBehaviour
     {
         var targetTile = Vector2.zero;
 
-        if (ghostType == GhostType.Blinky)
+        if (_ghost.ghostType == GhostType.Blinky)
         {
             targetTile = GetBlinkyTargetTile();
             
-        } else if (ghostType == GhostType.Pinky)
+        } else if (_ghost.ghostType == GhostType.Pinky)
         {
             targetTile = GetPinkyTargetTile();
         }
 
         return targetTile;
+    }
+
+    private void ReleasePinky()
+    {
+        if (_ghost.ghostType == GhostType.Pinky && _ghost.isInGhostHouse)
+        {
+            _ghost.isInGhostHouse = false;
+        }
+    }
+
+    public void ReleaseGhosts()
+    {
+        _ghost.ghostReleaseTimer += Time.deltaTime;
+
+        if (_ghost.ghostReleaseTimer > _ghost.pinkyReleaseTimer)
+        {
+            ReleasePinky();
+        }
     }
 }

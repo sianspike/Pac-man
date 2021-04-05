@@ -5,9 +5,10 @@ using UnityEngine;
 
 public class Ghost : MonoBehaviour
 {
-    public float ghostReleaseTimer = 0;
-    public int pinkyReleaseTimer = 5;
-
+    [SerializeField] public GhostType ghostType = GhostType.Blinky;
+    [SerializeField] public float ghostReleaseTimer = 0;
+    [SerializeField] public int pinkyReleaseTimer = 5;
+    
     private const int ScatterModeTimer1 = 7;
     private const int ChaseModeTimer1 = 20;
     private const int ScatterModeTimer2 = 7;
@@ -21,9 +22,9 @@ public class Ghost : MonoBehaviour
     private Move _ghostMovement;
     private GameObject _pacman;
     private GameBoard _gameBoard;
-    private Node _targetNode;
     private Orientation _ghostOrientation;
     private Vector2 _direction = Vector2.zero;
+    public bool isInGhostHouse = false;
 
     private void Start()
     {
@@ -38,6 +39,7 @@ public class Ghost : MonoBehaviour
         ModeUpdate();
         _direction = _ghostMovement.MoveGhost();
         _ghostOrientation.UpdateOrientation(_direction);
+        _ghostMovement.ReleaseGhosts();
     }
 
     private void ChangeMode(Mode mode)
