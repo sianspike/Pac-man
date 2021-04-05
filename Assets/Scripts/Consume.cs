@@ -7,6 +7,12 @@ using Debug = UnityEngine.Debug;
 public class Consume : MonoBehaviour
 {
     private int _pelletsConsumed;
+    private Audio _audio;
+
+    private void Start()
+    {
+        _audio = GetComponent<Audio>();
+    }
     
     private GameObject GetTileAtPosition(Vector2 position, GameBoard gameBoard)
     {
@@ -33,6 +39,7 @@ public class Consume : MonoBehaviour
             tile.consumed = true;
             gameBoard.Score++;
             _pelletsConsumed++;
+            _audio.PlayChompSound();
         }
     }
 }

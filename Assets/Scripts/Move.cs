@@ -286,7 +286,7 @@ public class Move : MonoBehaviour
     {
         //2 tiles ahead of pacman
         Vector2 pacmanPosition = _pacman.transform.localPosition;
-        Vector2 blinkyPosition = _ghost.transform.localPosition;
+        Vector2 blinkyPosition = GameObject.Find("blinky").transform.localPosition;
         var pacmanPositionX = Mathf.RoundToInt(pacmanPosition.x);
         var pacmanPositionY = Mathf.RoundToInt(pacmanPosition.y);
         var pacmanTile = new Vector2(pacmanPositionX, pacmanPositionY);
