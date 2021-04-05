@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 using UnityEngine;
 using Debug = UnityEngine.Debug;
 
@@ -8,10 +9,12 @@ public class Consume : MonoBehaviour
 {
     private int _pelletsConsumed;
     private Audio _audio;
+    private GameObject[] _ghostGameObjects;
 
     private void Start()
     {
         _audio = GetComponent<Audio>();
+        _ghostGameObjects = GameObject.FindGameObjectsWithTag("ghost");
     }
     
     private GameObject GetTileAtPosition(Vector2 position, GameBoard gameBoard)
@@ -40,6 +43,14 @@ public class Consume : MonoBehaviour
             gameBoard.Score++;
             _pelletsConsumed++;
             _audio.PlayChompSound();
+
+            if (tile.isSuperPellet)
+            {
+                foreach (var ghost in _ghostGameObjects)
+                {
+                    ghost.GetComponent<Ghost>().StartFrightenedMode();
+                }
+            }
         }
     }
 }

@@ -7,16 +7,25 @@ using UnityEngine.Serialization;
 public class Ghost : MonoBehaviour
 {
     [SerializeField] public GhostType ghostType = GhostType.Blinky;
-    [SerializeField] public float ghostReleaseTimer = 0;
-    [SerializeField] public int pinkyReleaseTimer = 5;
-    [SerializeField] public int inkyReleaseTimer = 14;
-    [SerializeField] public int clydeReleaseTimer = 21;
     [SerializeField] public Node homeNode;
-    [SerializeField] public Mode currentMode = Mode.Scatter;
+    [SerializeField] public bool isInGhostHouse;
     [SerializeField] public RuntimeAnimatorController ghostUp;
     [SerializeField] public RuntimeAnimatorController ghostDown;
     [SerializeField] public RuntimeAnimatorController ghostLeft;
     [SerializeField] public RuntimeAnimatorController ghostRight;
+    [SerializeField] public RuntimeAnimatorController ghostFrightened;
+    [SerializeField] public RuntimeAnimatorController ghostWhite;
+    [SerializeField] public float frightenedSpeed = 2.9f;
+    
+    public Mode currentMode = Mode.Scatter;
+    public float ghostReleaseTimer = 0;
+    public int pinkyReleaseTimer = 5;
+    public int inkyReleaseTimer = 14;
+    public int clydeReleaseTimer = 21;
+    public int startBlinkingAt = 7;
+    public float frightenedModeTimer;
+    public float blinkTimer;
+    public bool ghostIsWhite;
 
     private const int ScatterModeTimer1 = 7;
     private const int ChaseModeTimer1 = 20;
@@ -30,7 +39,9 @@ public class Ghost : MonoBehaviour
     private Move _ghostMovement;
     private Orientation _ghostOrientation;
     private Vector2 _direction = Vector2.zero;
-    public bool isInGhostHouse;
+    private float _previousSpeed;
+    private Mode _previousMode;
+    private const int FrightenedModeDuration = 10;
 
     private void Start()
     {
@@ -48,6 +59,18 @@ public class Ghost : MonoBehaviour
 
     private void ChangeMode(Mode mode)
     {
+        if (currentMode == Mode.Frightened)
+        {
+            _ghostMovement.speed = _previousSpeed;
+        }
+
+        if (mode == Mode.Frightened)
+        {
+            _previousSpeed = _ghostMovement.speed;
+            _ghostMovement.speed = frightenedSpeed;
+        }
+
+        _previousMode = currentMode;
         currentMode = mode;
     }
 
@@ -115,8 +138,19 @@ public class Ghost : MonoBehaviour
         }
         else if (currentMode == Mode.Frightened)
         {
+            frightenedModeTimer += Time.deltaTime;
 
+            if (frightenedModeTimer >= FrightenedModeDuration)
+            {
+                frightenedModeTimer = 0;
+                ChangeMode(_previousMode);
+            }
         }
+    }
+
+    public void StartFrightenedMode()
+    {
+        ChangeMode(Mode.Frightened);
     }
 }
 

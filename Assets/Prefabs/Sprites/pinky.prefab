@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 230689995008380919}
   - component: {fileID: 230689995008380920}
   - component: {fileID: 230689995008380923}
+  - component: {fileID: 230689995008380924}
   m_Layer: 0
   m_Name: pinky
   m_TagString: ghost
@@ -97,7 +98,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4065cbbc507be45209f02e98106f2eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.9
+  speed: 5.9
 --- !u!114 &230689995008380920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -117,11 +118,13 @@ MonoBehaviour:
   clydeReleaseTimer: 21
   homeNode: {fileID: 0}
   currentMode: 1
+  isInGhostHouse: 1
   ghostUp: {fileID: 9100000, guid: 4e7bffcfa49a14eea9c5b0888d941dc9, type: 2}
   ghostDown: {fileID: 9100000, guid: 1c4e9c7032a47461cb7a704396d84faf, type: 2}
   ghostLeft: {fileID: 9100000, guid: 446e48a7c5e714c4ea95b2665e9e9825, type: 2}
   ghostRight: {fileID: 9100000, guid: df8181963e8ff4b4198356de054571d7, type: 2}
-  isInGhostHouse: 1
+  ghostFrightened: {fileID: 9100000, guid: 2b137eb4c1adc42d09b0b213becb6f08, type: 2}
+  ghostWhite: {fileID: 9100000, guid: ff2682206d2834dedae8303729d8f655, type: 2}
 --- !u!114 &230689995008380923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +137,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4be4c748c9b45e7b096cea20c65ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &230689995008380924
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070437333421803503}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

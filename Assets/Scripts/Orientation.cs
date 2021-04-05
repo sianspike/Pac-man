@@ -27,10 +27,14 @@ public class Orientation : MonoBehaviour
             if (!gameObject.CompareTag("ghost"))
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostLeft;
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            {
+                _animator.runtimeAnimatorController = _ghost.ghostFrightened;
             }
             
             transform.localScale = new Vector3(-1, 1, 1);
@@ -40,10 +44,14 @@ public class Orientation : MonoBehaviour
             if (!gameObject.CompareTag("ghost"))
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
-            }
-            else
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostRight;
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            {
+                _animator.runtimeAnimatorController = _ghost.ghostFrightened;
             }
             
             transform.localScale = new Vector3(1, 1, 1);
@@ -53,10 +61,14 @@ public class Orientation : MonoBehaviour
             if (!gameObject.CompareTag("ghost"))
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 90);
-            }
-            else
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostUp;
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            {
+                _animator.runtimeAnimatorController = _ghost.ghostFrightened;
             }
             
             transform.localScale = new Vector3(1, 1, 1);
@@ -66,10 +78,33 @@ public class Orientation : MonoBehaviour
             if (!gameObject.CompareTag("ghost"))
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 270);
-            }
-            else
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostDown;
+                
+            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            {
+                if (_ghost.frightenedModeTimer >= _ghost.startBlinkingAt)
+                {
+                    _ghost.blinkTimer += Time.deltaTime;
+
+                    if (_ghost.blinkTimer >= 0.1f)
+                    {
+                        _ghost.blinkTimer = 0f;
+
+                        if (_ghost.ghostIsWhite)
+                        {
+                            _animator.runtimeAnimatorController = _ghost.ghostFrightened;
+                            _ghost.ghostIsWhite = false;
+                        }
+                        else
+                        {
+                            _animator.runtimeAnimatorController = _ghost.ghostWhite;
+                            _ghost.ghostIsWhite = true;
+                        }
+                    }
+                }
             }
             
             transform.localScale = new Vector3(1, 1, 1);

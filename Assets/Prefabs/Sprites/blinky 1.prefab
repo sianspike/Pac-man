@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1921844229145170784}
   - component: {fileID: 6928520799028932914}
   - component: {fileID: 8174075472444482824}
+  - component: {fileID: 1149000720}
   m_Layer: 0
   m_Name: blinky 1
   m_TagString: ghost
@@ -104,11 +105,13 @@ MonoBehaviour:
   clydeReleaseTimer: 21
   homeNode: {fileID: 0}
   currentMode: 1
+  isInGhostHouse: 0
   ghostUp: {fileID: 9100000, guid: 8b0e4639d963c4ce9bf9e5c87dbd5ad6, type: 2}
   ghostDown: {fileID: 9100000, guid: 9c9612d4b81f148b988ec57b94981bcc, type: 2}
   ghostLeft: {fileID: 9100000, guid: 785e9f3b0d4ac4ee6b466a889a16d75c, type: 2}
   ghostRight: {fileID: 9100000, guid: 66fcb43441ef14c2b8e9925ffb1eefb7, type: 2}
-  isInGhostHouse: 0
+  ghostFrightened: {fileID: 9100000, guid: 2b137eb4c1adc42d09b0b213becb6f08, type: 2}
+  ghostWhite: {fileID: 9100000, guid: ff2682206d2834dedae8303729d8f655, type: 2}
 --- !u!114 &6928520799028932914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,7 +124,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4065cbbc507be45209f02e98106f2eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.9
+  speed: 5.9
 --- !u!114 &8174075472444482824
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,3 +137,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e4be4c748c9b45e7b096cea20c65ec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &1149000720
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8335442873865294313}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0

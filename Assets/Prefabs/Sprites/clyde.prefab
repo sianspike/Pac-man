@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1862658398809434899}
   - component: {fileID: 388312935}
   - component: {fileID: 388312936}
+  - component: {fileID: 388312940}
   m_Layer: 0
   m_Name: clyde
   m_TagString: ghost
@@ -104,11 +105,13 @@ MonoBehaviour:
   clydeReleaseTimer: 21
   homeNode: {fileID: 0}
   currentMode: 1
+  isInGhostHouse: 1
   ghostUp: {fileID: 9100000, guid: 7d72a5ebeee0b4abdb6f12d3bc02a926, type: 2}
   ghostDown: {fileID: 9100000, guid: 28b3b56b7e51e4ff29c37c42b9c6cfbc, type: 2}
   ghostLeft: {fileID: 9100000, guid: d80d19f6f5e3542f9b1143b402835ee0, type: 2}
   ghostRight: {fileID: 9100000, guid: 7613825522a0c4b2784a3f446f134b4a, type: 2}
-  isInGhostHouse: 1
+  ghostFrightened: {fileID: 9100000, guid: 2b137eb4c1adc42d09b0b213becb6f08, type: 2}
+  ghostWhite: {fileID: 9100000, guid: ff2682206d2834dedae8303729d8f655, type: 2}
 --- !u!114 &388312935
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,4 +136,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4065cbbc507be45209f02e98106f2eb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3.9
+  speed: 5.9
+--- !u!95 &388312940
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999473626826123148}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
