@@ -37,13 +37,15 @@ public class GhostMode : MonoBehaviour
 
         if (mode == Mode.Frightened)
         {
-            Debug.Log("frightened");
             _previousSpeed = _ghostMovement.speed;
             _ghostMovement.speed = frightenedSpeed;
         }
 
-        _previousMode = currentMode;
-        currentMode = mode;
+        if (currentMode != mode)
+        {
+            _previousMode = currentMode;
+            currentMode = mode;
+        }
     }
     
     public void ModeUpdate()
@@ -122,6 +124,8 @@ public class GhostMode : MonoBehaviour
 
     public void StartFrightenedMode()
     {
+        frightenedModeTimer = 0;
+        
         ChangeMode(Mode.Frightened);
     }
 }
