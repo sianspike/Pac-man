@@ -48,7 +48,7 @@ public class Consume : MonoBehaviour
             {
                 foreach (var ghost in _ghostGameObjects)
                 {
-                    ghost.GetComponent<Ghost>().StartFrightenedMode();
+                    ghost.GetComponent<GhostMode>().StartFrightenedMode();
                 }
             }
         }

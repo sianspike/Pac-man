@@ -12,11 +12,13 @@ public class Move : MonoBehaviour
     private GameBoard _gameBoard;
     private Pacman _pacman;
     private Ghost _ghost;
+    private GhostMode _ghostMode;
 
     private void Start()
     {
         _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
         _pacman = GameObject.FindGameObjectWithTag("pacman").GetComponent<Pacman>();
+        _ghostMode = GameObject.FindObjectOfType<GhostMode>();
 
         var node = GetNodeAtPosition(transform.position, _gameBoard);
 
@@ -203,11 +205,11 @@ public class Move : MonoBehaviour
         Node moveToNode = null;
         var targetTile = Vector2.zero;
 
-        if (_ghost.currentMode == Mode.Chase)
+        if (_ghostMode.currentMode == Mode.Chase)
         {
             targetTile = GetTargetTile();
             
-        } else if (_ghost.currentMode == Mode.Scatter)
+        } else if (_ghostMode.currentMode == Mode.Scatter)
         {
             targetTile = _ghost.homeNode.transform.position;
         }

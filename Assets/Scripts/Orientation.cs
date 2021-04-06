@@ -8,6 +8,7 @@ public class Orientation : MonoBehaviour
 {
     private Animator _animator;
     private Ghost _ghost;
+    private GhostMode _ghostMode;
 
     private void Start()
     {
@@ -17,6 +18,7 @@ public class Orientation : MonoBehaviour
         {
             _ghost = gameObject.GetComponent<Ghost>();
             _animator.runtimeAnimatorController = _ghost.ghostLeft;
+            _ghostMode = gameObject.GetComponent<GhostMode>();
         }
     }
     
@@ -28,11 +30,11 @@ public class Orientation : MonoBehaviour
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostLeft;
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode == Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostFrightened;
             }
@@ -45,11 +47,11 @@ public class Orientation : MonoBehaviour
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 0);
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostRight;
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode == Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostFrightened;
             }
@@ -62,11 +64,11 @@ public class Orientation : MonoBehaviour
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 90);
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostUp;
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode == Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostFrightened;
             }
@@ -79,13 +81,13 @@ public class Orientation : MonoBehaviour
             {
                 transform.localRotation = Quaternion.Euler(0, 0, 270);
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode != Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode != Mode.Frightened)
             {
                 _animator.runtimeAnimatorController = _ghost.ghostDown;
                 
-            } else if (gameObject.CompareTag("ghost") && _ghost.currentMode == Mode.Frightened)
+            } else if (gameObject.CompareTag("ghost") && _ghostMode.currentMode == Mode.Frightened)
             {
-                if (_ghost.frightenedModeTimer >= _ghost.startBlinkingAt)
+                if (_ghostMode.frightenedModeTimer >= _ghost.startBlinkingAt)
                 {
                     _ghost.blinkTimer += Time.deltaTime;
 
