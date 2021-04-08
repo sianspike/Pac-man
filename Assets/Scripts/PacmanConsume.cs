@@ -1,34 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
 using UnityEngine;
-using Debug = UnityEngine.Debug;
 
-public class Consume : MonoBehaviour
+public class PacmanConsume: MonoBehaviour
 {
     private int _pelletsConsumed;
     private Audio _audio;
     private GameObject[] _ghostGameObjects;
+    private PacmanMove _pacmanMove;
+    private GameObject _game;
 
     private void Start()
     {
-        _audio = GetComponent<Audio>();
+        _game = GameObject.Find("game");
+        _audio = _game.transform.GetComponent<Audio>();
         _ghostGameObjects = GameObject.FindGameObjectsWithTag("ghost");
+        _pacmanMove = GetComponent<PacmanMove>();
     }
     
-    private GameObject GetTileAtPosition(Vector2 position, GameBoard gameBoard)
+    public void ConsumePellet()
     {
-        var tileX = Mathf.RoundToInt(position.x);
-        var tileY = Mathf.RoundToInt(position.y);
-        var tile = gameBoard.Board[tileX, tileY];
-
-        return tile;
-    }
-
-    public void ConsumePellet(GameBoard gameBoard)
-    {
-        var tileObject = GetTileAtPosition(transform.position, gameBoard);
+        var tileObject = _pacmanMove.GetTileAtPosition(transform.position);
 
         if (ReferenceEquals(tileObject, null)) return;
         
@@ -40,7 +30,7 @@ public class Consume : MonoBehaviour
         {
             tileObject.GetComponent<SpriteRenderer>().enabled = false;
             tile.consumed = true;
-            gameBoard.Score++;
+            GameBoard.Instance.score++;
             _pelletsConsumed++;
             _audio.PlayChompSound();
 
