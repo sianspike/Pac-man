@@ -219,6 +219,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &5213100
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -315,6 +317,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &14492799
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -561,6 +565,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &20852221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -599,6 +605,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &25303603
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -770,6 +778,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &28822642 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -791,6 +801,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &39346139 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -812,6 +824,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &39764061
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -925,6 +939,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &57699515 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -946,6 +962,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &62179482 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -967,6 +985,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &68541797 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -1004,6 +1024,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &70488759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1130,6 +1152,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &71376128
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1226,6 +1250,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &72758382
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1339,6 +1365,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &75854791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1510,6 +1538,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &87856358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -1548,6 +1578,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &88392083 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -1569,6 +1601,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &88646821 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -1590,6 +1624,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &88894399
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1852,6 +1888,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &108572029
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2023,6 +2061,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &126190937
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2119,6 +2159,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &137066871
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2440,6 +2482,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &168733896 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -2461,6 +2505,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &168917409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2569,6 +2615,7 @@ MonoBehaviour:
   - {fileID: 323883158}
   - {fileID: 1550157642}
   - {fileID: 1724456794}
+  - {fileID: 432914223}
   validDirections: []
 --- !u!114 &168917413
 MonoBehaviour:
@@ -2585,6 +2632,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 1
+  isGhostHouse: 0
 --- !u!1001 &177477015
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2906,6 +2955,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &195438857
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3077,6 +3128,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &205526968 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -3098,6 +3151,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &206300230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -3135,6 +3190,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &207125338
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3381,6 +3438,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &215609577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -3402,6 +3461,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &223333059
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3515,6 +3576,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &223624911
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3611,6 +3674,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &224098581
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3707,6 +3772,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &236582231
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3803,6 +3870,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &241234962
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4049,6 +4118,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &249642127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4145,6 +4216,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &255554157 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -4166,6 +4239,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &255930762
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4337,6 +4412,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &258927220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4433,6 +4510,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &276436749
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4604,6 +4683,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &285895144
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4700,6 +4781,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &294589359
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4796,6 +4879,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &300320027 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -4834,6 +4919,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &302082829
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4930,6 +5017,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &311305515
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5056,6 +5145,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &318479860 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -5094,6 +5185,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &323814214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5293,6 +5386,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &328537759
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5464,6 +5559,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &351970792 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -5485,6 +5582,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &362221170 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -5506,6 +5605,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &362963441 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -5527,6 +5628,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &365006260 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -5548,6 +5651,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &371426225 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -5569,6 +5674,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &372699012
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5890,6 +5997,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &417409855 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -5911,6 +6020,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &421560903
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6007,6 +6118,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &432914219
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6048,7 +6161,7 @@ PrefabInstance:
     - target: {fileID: 8668139728756215850, guid: 34b79518dff024a2a94a7ab310131656,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 51.96266
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 8668139728756215850, guid: 34b79518dff024a2a94a7ab310131656,
         type: 3}
@@ -6114,6 +6227,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 1
 --- !u!114 &432914223
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6150,6 +6265,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &436333363 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -6188,6 +6305,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &437065496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6284,6 +6403,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &439490727
 GameObject:
   m_ObjectHideFlags: 0
@@ -6295,6 +6416,7 @@ GameObject:
   - component: {fileID: 439490729}
   - component: {fileID: 439490728}
   - component: {fileID: 439490730}
+  - component: {fileID: 439490731}
   m_Layer: 0
   m_Name: game
   m_TagString: Untagged
@@ -6314,7 +6436,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91b86972cd8b7463097317ee4b567570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: 0
+  lives: 3
+  score: 0
 --- !u!4 &439490729
 Transform:
   m_ObjectHideFlags: 0
@@ -6425,6 +6548,24 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &439490731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439490727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ebb870b589ab48c3a8909454746b6ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chomp1: {fileID: 8300000, guid: d9a7453f78b3348afb0a392ea494a9d4, type: 3}
+  chomp2: {fileID: 8300000, guid: 30fda116ca96c479e8edd4be344f7532, type: 3}
+  normalBackgroundAudio: {fileID: 8300000, guid: 490ef8a8d95d44abbbb83688af970b1a,
+    type: 3}
+  frightenedBackgroundAudio: {fileID: 8300000, guid: 40c1c9d1b744a4a438712dc1afbb8a9b,
+    type: 3}
 --- !u!1 &443167900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -6446,6 +6587,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &452139516
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6645,6 +6788,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &465976106 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -6666,6 +6811,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &466109671
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6837,6 +6984,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &478598523 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -6858,6 +7007,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &480599449 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -6895,6 +7046,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &482069089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -6933,6 +7086,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &489947629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -6970,6 +7125,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &491360757
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7066,6 +7223,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &503025140 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7087,6 +7246,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &507515176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7199,6 +7360,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &510351007 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7220,6 +7383,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &516295317 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7241,6 +7406,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -7361,6 +7528,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &543392869
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7607,6 +7776,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &549835358 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7628,6 +7799,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &552083080 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7665,6 +7838,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &556351879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7703,6 +7878,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &559829739
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7799,6 +7976,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &568899079
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7895,6 +8074,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &569790861 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7916,6 +8097,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &574456134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8012,6 +8195,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &580127636 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -8033,6 +8218,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &581941272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8129,6 +8316,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &583785430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8225,6 +8414,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &591502920
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8321,6 +8512,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &596248230 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -8342,6 +8535,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &596867392 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -8363,6 +8558,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &602368214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8534,6 +8731,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &613133471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8630,6 +8829,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &618618892 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -8667,6 +8868,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &622436489
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8855,6 +9058,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &633157539 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -8876,6 +9081,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &634633723
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9289,6 +9496,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &646093272
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9760,6 +9969,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &672320183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9947,6 +10158,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &682466602 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -9968,6 +10181,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &684887625 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -9989,6 +10204,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &687105299 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10010,6 +10227,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &690148717 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10031,6 +10250,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &694250586
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10143,6 +10364,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &698120631 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10180,6 +10403,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &698826017 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10201,6 +10426,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &699675572
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10372,6 +10599,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &700387985 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10393,6 +10622,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &707102113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10489,6 +10720,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &713278644 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10510,6 +10743,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &714789500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10623,6 +10858,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &721539576 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10644,6 +10881,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &728841884 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10665,6 +10904,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &731345516 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -10703,6 +10944,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &733921675
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10799,6 +11042,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &746662658
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10970,6 +11215,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &766255653
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11312,6 +11559,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &770318410
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11408,6 +11657,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &774759139
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11504,6 +11755,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &780060175 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -11525,6 +11778,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &780247231 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -11562,6 +11817,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &781481498
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11675,6 +11932,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &784581905 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -11696,6 +11955,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &785857245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11792,6 +12053,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &806882607
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12038,6 +12301,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &810174870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12209,6 +12474,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &817693701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12333,6 +12600,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &822252864
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12590,6 +12859,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &829069668
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12686,6 +12957,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &839113742 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -12707,6 +12980,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &839271250 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -12728,6 +13003,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &840180520
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13049,6 +13326,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &850176619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13295,6 +13574,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &856151207 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -13332,6 +13613,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &859507405
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13503,6 +13786,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &875217357 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -13524,6 +13809,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &877661712 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -13563,6 +13850,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &881550038
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13676,6 +13965,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &885624664
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13772,6 +14063,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &886493057 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -13811,6 +14104,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &891585565
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13924,6 +14219,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &903369872
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14095,6 +14392,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &916406794 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14116,6 +14415,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &920947912 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14137,6 +14438,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &921570092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14250,6 +14553,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &924664445 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14271,6 +14576,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &927827578 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14292,6 +14599,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &931578538 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14313,6 +14622,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &935811171
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14409,6 +14720,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &949953176
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14805,6 +15118,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &965454759 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14826,6 +15141,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &967121319 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14847,6 +15164,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &967155854 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -14868,6 +15187,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &970204427
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15039,6 +15360,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &990267905
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15210,6 +15533,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &998478080
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15381,6 +15706,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1015018595 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -15402,6 +15729,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1015641874
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15498,6 +15827,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1031620728
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15910,6 +16241,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1054451966
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16006,6 +16339,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1060669655
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16102,6 +16437,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1066180236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -16123,6 +16460,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1068174152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16219,6 +16558,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1073517293
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16465,6 +16806,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1081252948 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -16486,6 +16829,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1086292810 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -16507,6 +16852,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1086592132 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -16528,6 +16875,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1093348399 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -16549,6 +16898,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1103951629 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -16570,6 +16921,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1104926078
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16757,6 +17110,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 1
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1124449871 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -16778,6 +17133,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1125018839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16949,6 +17306,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1131176329
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17495,6 +17854,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1152121839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17741,6 +18102,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1184093842 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -17762,6 +18125,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1190767482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17858,6 +18223,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1197501626
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18104,6 +18471,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1207594012 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -18125,6 +18494,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1212293202
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18221,6 +18592,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1218804110 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -18242,6 +18615,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1220361030
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18456,6 +18831,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1232738362 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -18477,6 +18854,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1235105365
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18573,6 +18952,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1253333453
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18685,6 +19066,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1255432730
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18873,6 +19256,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1265489680
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19074,6 +19459,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1281380478
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19186,6 +19573,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1286067537 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -19224,6 +19613,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1286601062 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -19245,6 +19636,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1288286149
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19493,6 +19886,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1301977715 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -19514,6 +19909,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1307680391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -19535,6 +19932,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1307984597
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19631,6 +20030,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1312266179 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -19652,6 +20053,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1314110137 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -19673,6 +20076,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1316246806
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19769,6 +20174,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1323881840
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19882,6 +20289,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1331140568 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -19903,6 +20312,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1333734852
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20224,6 +20635,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1343870833
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20320,6 +20733,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1358142832 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -20341,6 +20756,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1362942125 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -20368,6 +20785,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1364542179
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20631,6 +21050,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1369280459
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20743,6 +21164,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1391683385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -20780,6 +21203,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1394599614 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -20801,6 +21226,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1403209734
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20972,6 +21399,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1416006266
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21100,6 +21529,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1420716115 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -21121,6 +21552,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1429475468
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21217,6 +21650,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1457963956 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -21238,6 +21673,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1463544602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21634,6 +22071,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1491104906
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21746,6 +22185,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1503010117
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -21917,6 +22358,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1511047226 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -21954,6 +22397,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1513441043 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -21975,6 +22420,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1514055973
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22164,6 +22611,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1518268015 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -22185,6 +22634,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1523760253 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -22206,6 +22657,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1525276317
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22319,6 +22772,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1550157641 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -22356,6 +22811,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1551581545 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -22377,6 +22834,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1551677096 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -22398,6 +22857,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1555468543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22569,6 +23030,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1564351660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22740,6 +23203,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1576780844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -22761,6 +23226,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1577231812
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22877,7 +23344,7 @@ PrefabInstance:
     - target: {fileID: 8668139728756215850, guid: 34b79518dff024a2a94a7ab310131656,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 51.96266
+      value: 52
       objectReference: {fileID: 0}
     - target: {fileID: 8668139728756215850, guid: 34b79518dff024a2a94a7ab310131656,
         type: 3}
@@ -22958,6 +23425,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 1
 --- !u!1001 &1588478310
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23129,6 +23598,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1594712993 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -23150,6 +23621,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1604358376
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23246,6 +23719,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1614163991
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23342,6 +23817,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1615516508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -23363,6 +23840,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1617608069 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -23384,6 +23863,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1617871496
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23555,6 +24036,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1625028089
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23651,6 +24134,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1627951743 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -23672,6 +24157,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1629523416
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23768,6 +24255,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1635178389
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24030,6 +24519,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1645846228 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -24051,6 +24542,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1646324251
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24389,6 +24882,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1659308285
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24560,6 +25055,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1666630401 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -24581,6 +25078,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1669591148
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24768,6 +25267,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1673429844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24864,6 +25365,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1686690452
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25035,6 +25538,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1698177977 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -25056,6 +25561,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1716482715
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25152,6 +25659,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1723835009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25335,6 +25844,7 @@ MonoBehaviour:
   - {fileID: 168917412}
   - {fileID: 1921561296}
   - {fileID: 1725511425}
+  - {fileID: 1577672372}
   validDirections: []
 --- !u!114 &1724456795
 MonoBehaviour:
@@ -25351,6 +25861,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 1
+  isGhostHouse: 0
 --- !u!1001 &1725511422
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25475,6 +25987,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1732516491 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -25496,6 +26010,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1737437025 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -25517,6 +26033,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1739273791
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25630,6 +26148,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1755924370
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25726,6 +26246,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1768255454
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -25822,6 +26344,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1780004463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -25843,6 +26367,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1780205132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26014,6 +26540,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1791870252 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -26051,6 +26579,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1791972561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -26072,6 +26602,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1793364922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26167,6 +26699,49 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   chomp1: {fileID: 8300000, guid: d9a7453f78b3348afb0a392ea494a9d4, type: 3}
   chomp2: {fileID: 8300000, guid: 30fda116ca96c479e8edd4be344f7532, type: 3}
+  normalBackgroundAudio: {fileID: 0}
+  frightenedBackgroundAudio: {fileID: 0}
+--- !u!114 &1794540553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794540551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bedee715bd3845b6b0910beee5ed57e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 6
+  currentNode: {fileID: 0}
+  targetNode: {fileID: 0}
+  previousNode: {fileID: 0}
+  nextDirection: {x: 0, y: 0}
+--- !u!114 &1794540554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794540551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 858b787b9639491c9b7ea4acf7abe566, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1794540555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1794540551}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63d2fef7f4b24e45b1430a5726ffd740, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!82 &1794540561
 AudioSource:
   m_ObjectHideFlags: 0
@@ -26301,6 +26876,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1801607543 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -26322,6 +26899,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1801807513
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26643,6 +27222,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1813558870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26756,6 +27337,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1813781095
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26852,6 +27435,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1816711144 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -26873,6 +27458,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1817917508 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -26894,6 +27481,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1830548188
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26990,6 +27579,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1834532825 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27011,6 +27602,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1846400129
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27349,6 +27942,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1858479841 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27370,6 +27965,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1859834561 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27391,6 +27988,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1864456124
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27517,6 +28116,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1868925489 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27555,6 +28156,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1869112570
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27668,6 +28271,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1879311048
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -27914,6 +28519,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1900921577 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27935,6 +28542,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1901006098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27956,6 +28565,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1901016152 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27977,6 +28588,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1905375280 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -27998,6 +28611,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1907198296 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28019,6 +28634,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1907604683
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28115,6 +28732,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1916368306 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28154,6 +28773,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1921561295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28191,6 +28812,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1923951241 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28228,6 +28851,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1936161173 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28249,6 +28874,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1937191943
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28362,6 +28989,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1940340690 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28383,6 +29012,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1943356412 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28421,6 +29052,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1948121864 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -28442,6 +29075,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1951719990
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28613,6 +29248,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &1963164089 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1649318141786362108, guid: e94618458278349dba2886112614688d,
@@ -28650,6 +29287,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 1
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1965217243
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -28987,6 +29626,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1971089259
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29158,6 +29799,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1981505127
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29254,6 +29897,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1986650925
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29350,6 +29995,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &1993907917
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29521,6 +30168,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &2014677245
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30233,6 +30882,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &2054465645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1649318141786362108, guid: e94618458278349dba2886112614688d,
@@ -30270,6 +30921,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 1
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &2056297425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30441,6 +31094,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &2076220981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -30479,6 +31134,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &2078537147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -30517,6 +31174,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &2085189010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30613,6 +31272,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &2092557077 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -30634,6 +31295,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &2094891147 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -30671,6 +31334,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &2095863533
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -30917,6 +31582,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &2102402031
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31029,6 +31696,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1 &2121243236 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1649318141786362108, guid: e94618458278349dba2886112614688d,
@@ -31066,6 +31735,8 @@ MonoBehaviour:
   isPellet: 0
   isSuperPellet: 1
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &2125008764
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31479,6 +32150,8 @@ MonoBehaviour:
   isPellet: 1
   isSuperPellet: 0
   consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0
 --- !u!1001 &2146157695
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31630,11 +32303,50 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 230689995008380919, guid: e55358fad58114ac79838bb978a108a2,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 230689995008380920, guid: e55358fad58114ac79838bb978a108a2,
+        type: 3}
+      propertyPath: eyesUp
+      value: 
+      objectReference: {fileID: 21300000, guid: 832d382be94b448ac8a7cd67c7100d2e,
+        type: 3}
+    - target: {fileID: 230689995008380920, guid: e55358fad58114ac79838bb978a108a2,
+        type: 3}
+      propertyPath: eyesDown
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bf8d25eecc8a4c7d8f28e113de8ecaf,
+        type: 3}
+    - target: {fileID: 230689995008380920, guid: e55358fad58114ac79838bb978a108a2,
+        type: 3}
+      propertyPath: eyesLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 00a9ff24b9cb341569cb21e78d2754d9,
+        type: 3}
     - target: {fileID: 230689995008380920, guid: e55358fad58114ac79838bb978a108a2,
         type: 3}
       propertyPath: homeNode
       value: 
       objectReference: {fileID: 1280551173}
+    - target: {fileID: 230689995008380920, guid: e55358fad58114ac79838bb978a108a2,
+        type: 3}
+      propertyPath: eyesRight
+      value: 
+      objectReference: {fileID: 21300000, guid: 65aa0a5451d1c4cc9b9c03ecf07f3120,
+        type: 3}
+    - target: {fileID: 230689995008380920, guid: e55358fad58114ac79838bb978a108a2,
+        type: 3}
+      propertyPath: ghostHouse
+      value: 
+      objectReference: {fileID: 432914223}
+    - target: {fileID: 230689995008380920, guid: e55358fad58114ac79838bb978a108a2,
+        type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 432914223}
     - target: {fileID: 2070437333421803503, guid: e55358fad58114ac79838bb978a108a2,
         type: 3}
       propertyPath: m_Name
@@ -31695,7 +32407,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 230689995008380919, guid: e55358fad58114ac79838bb978a108a2, type: 3}
+    - {fileID: 230689995008380923, guid: e55358fad58114ac79838bb978a108a2, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e55358fad58114ac79838bb978a108a2, type: 3}
 --- !u!1 &230689995008380918 stripped
 GameObject:
@@ -31712,12 +32426,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 230689995008380918}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421b3c3e7347e4c87bd83e043fc26e9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3298ba713c7af4123a60440f17ebd42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frightenedSpeed: 2.9
-  currentMode: 1
-  frightenedModeTimer: 0
+--- !u!114 &230689995008380921
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230689995008380918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266b8179d9f8468580f335dc0d822a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &230689995008380924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230689995008380918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d0352d73cd4c0d903ce210c7414622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &230689995008380929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230689995008380918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38201359b0f4f37beb474098e3bc08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5.9
+  currentNode: {fileID: 0}
+  targetNode: {fileID: 0}
+  previousNode: {fileID: 0}
+  nextDirection: {x: 0, y: 0}
+--- !u!114 &230689995008380930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 230689995008380918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ff91df84b040d1b34d4f09c5c04c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &633151603661974267
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31725,6 +32489,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 670327589, guid: 34d6637d169f44f4abfb704992a395ea, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 633151603218172376, guid: 34d6637d169f44f4abfb704992a395ea,
         type: 3}
       propertyPath: m_Name
@@ -31787,10 +32555,46 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6368804230463214445, guid: 34d6637d169f44f4abfb704992a395ea,
         type: 3}
+      propertyPath: eyesUp
+      value: 
+      objectReference: {fileID: 21300000, guid: 832d382be94b448ac8a7cd67c7100d2e,
+        type: 3}
+    - target: {fileID: 6368804230463214445, guid: 34d6637d169f44f4abfb704992a395ea,
+        type: 3}
+      propertyPath: eyesDown
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bf8d25eecc8a4c7d8f28e113de8ecaf,
+        type: 3}
+    - target: {fileID: 6368804230463214445, guid: 34d6637d169f44f4abfb704992a395ea,
+        type: 3}
+      propertyPath: eyesLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 00a9ff24b9cb341569cb21e78d2754d9,
+        type: 3}
+    - target: {fileID: 6368804230463214445, guid: 34d6637d169f44f4abfb704992a395ea,
+        type: 3}
       propertyPath: homeNode
       value: 
       objectReference: {fileID: 1864456127}
-    m_RemovedComponents: []
+    - target: {fileID: 6368804230463214445, guid: 34d6637d169f44f4abfb704992a395ea,
+        type: 3}
+      propertyPath: eyesRight
+      value: 
+      objectReference: {fileID: 21300000, guid: 65aa0a5451d1c4cc9b9c03ecf07f3120,
+        type: 3}
+    - target: {fileID: 6368804230463214445, guid: 34d6637d169f44f4abfb704992a395ea,
+        type: 3}
+      propertyPath: ghostHouse
+      value: 
+      objectReference: {fileID: 1577672372}
+    - target: {fileID: 6368804230463214445, guid: 34d6637d169f44f4abfb704992a395ea,
+        type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 1577672372}
+    m_RemovedComponents:
+    - {fileID: 670327589, guid: 34d6637d169f44f4abfb704992a395ea, type: 3}
+    - {fileID: 670327588, guid: 34d6637d169f44f4abfb704992a395ea, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 34d6637d169f44f4abfb704992a395ea, type: 3}
 --- !u!1 &633151603661974268 stripped
 GameObject:
@@ -31807,12 +32611,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 633151603661974268}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421b3c3e7347e4c87bd83e043fc26e9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3298ba713c7af4123a60440f17ebd42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frightenedSpeed: 2.9
-  currentMode: 1
-  frightenedModeTimer: 0
+--- !u!114 &633151603661974271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633151603661974268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266b8179d9f8468580f335dc0d822a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &633151603661974272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633151603661974268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d0352d73cd4c0d903ce210c7414622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &633151603661974279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633151603661974268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38201359b0f4f37beb474098e3bc08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5.9
+  currentNode: {fileID: 0}
+  targetNode: {fileID: 0}
+  previousNode: {fileID: 0}
+  nextDirection: {x: 0, y: 0}
+--- !u!114 &633151603661974280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 633151603661974268}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ff91df84b040d1b34d4f09c5c04c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &667491220494925536
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32027,15 +32881,56 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1921844229145170784, guid: d3b24bfcf6a10446e9452e98b375d9cf,
         type: 3}
+      propertyPath: eyesUp
+      value: 
+      objectReference: {fileID: 21300000, guid: 832d382be94b448ac8a7cd67c7100d2e,
+        type: 3}
+    - target: {fileID: 1921844229145170784, guid: d3b24bfcf6a10446e9452e98b375d9cf,
+        type: 3}
+      propertyPath: eyesDown
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bf8d25eecc8a4c7d8f28e113de8ecaf,
+        type: 3}
+    - target: {fileID: 1921844229145170784, guid: d3b24bfcf6a10446e9452e98b375d9cf,
+        type: 3}
+      propertyPath: eyesLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 00a9ff24b9cb341569cb21e78d2754d9,
+        type: 3}
+    - target: {fileID: 1921844229145170784, guid: d3b24bfcf6a10446e9452e98b375d9cf,
+        type: 3}
       propertyPath: homeNode
       value: 
       objectReference: {fileID: 70488762}
+    - target: {fileID: 1921844229145170784, guid: d3b24bfcf6a10446e9452e98b375d9cf,
+        type: 3}
+      propertyPath: eyesRight
+      value: 
+      objectReference: {fileID: 21300000, guid: 65aa0a5451d1c4cc9b9c03ecf07f3120,
+        type: 3}
+    - target: {fileID: 1921844229145170784, guid: d3b24bfcf6a10446e9452e98b375d9cf,
+        type: 3}
+      propertyPath: ghostHouse
+      value: 
+      objectReference: {fileID: 432914223}
+    - target: {fileID: 1921844229145170784, guid: d3b24bfcf6a10446e9452e98b375d9cf,
+        type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 168917412}
+    - target: {fileID: 6928520799028932914, guid: d3b24bfcf6a10446e9452e98b375d9cf,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8335442873865294313, guid: d3b24bfcf6a10446e9452e98b375d9cf,
         type: 3}
       propertyPath: m_Name
       value: blinky
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6928520799028932914, guid: d3b24bfcf6a10446e9452e98b375d9cf, type: 3}
+    - {fileID: 8174075472444482824, guid: d3b24bfcf6a10446e9452e98b375d9cf, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d3b24bfcf6a10446e9452e98b375d9cf, type: 3}
 --- !u!1 &4868456276515758062 stripped
 GameObject:
@@ -32052,12 +32947,62 @@ MonoBehaviour:
   m_GameObject: {fileID: 4868456276515758062}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421b3c3e7347e4c87bd83e043fc26e9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3298ba713c7af4123a60440f17ebd42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frightenedSpeed: 2.9
-  currentMode: 1
-  frightenedModeTimer: 0
+--- !u!114 &4868456276515758065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868456276515758062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266b8179d9f8468580f335dc0d822a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4868456276515758067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868456276515758062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d0352d73cd4c0d903ce210c7414622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4868456276515758073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868456276515758062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38201359b0f4f37beb474098e3bc08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5.9
+  currentNode: {fileID: 0}
+  targetNode: {fileID: 0}
+  previousNode: {fileID: 0}
+  nextDirection: {x: 0, y: 0}
+--- !u!114 &4868456276515758074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4868456276515758062}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ff91df84b040d1b34d4f09c5c04c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5856867997868802345
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -32065,6 +33010,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1794540559, guid: 8653c69bff3734c1a8410c02c57f5eb5, type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 714789503}
     - target: {fileID: 5856867997307157505, guid: 8653c69bff3734c1a8410c02c57f5eb5,
         type: 3}
       propertyPath: m_RootOrder
@@ -32073,7 +33022,7 @@ PrefabInstance:
     - target: {fileID: 5856867997307157505, guid: 8653c69bff3734c1a8410c02c57f5eb5,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 5856867997307157505, guid: 8653c69bff3734c1a8410c02c57f5eb5,
         type: 3}
@@ -32130,7 +33079,15 @@ PrefabInstance:
       propertyPath: speed
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 5856867997868802347, guid: 8653c69bff3734c1a8410c02c57f5eb5,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 5856867997868802347, guid: 8653c69bff3734c1a8410c02c57f5eb5, type: 3}
+    - {fileID: 1794540552, guid: 8653c69bff3734c1a8410c02c57f5eb5, type: 3}
+    - {fileID: 1794540558, guid: 8653c69bff3734c1a8410c02c57f5eb5, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8653c69bff3734c1a8410c02c57f5eb5, type: 3}
 --- !u!1001 &6999473627041794282
 PrefabInstance:
@@ -32139,11 +33096,49 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 388312936, guid: 43b14fc000e194f03bf83b7e0a2bd88e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862658398809434899, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
+        type: 3}
+      propertyPath: eyesUp
+      value: 
+      objectReference: {fileID: 21300000, guid: 832d382be94b448ac8a7cd67c7100d2e,
+        type: 3}
+    - target: {fileID: 1862658398809434899, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
+        type: 3}
+      propertyPath: eyesDown
+      value: 
+      objectReference: {fileID: 21300000, guid: 8bf8d25eecc8a4c7d8f28e113de8ecaf,
+        type: 3}
+    - target: {fileID: 1862658398809434899, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
+        type: 3}
+      propertyPath: eyesLeft
+      value: 
+      objectReference: {fileID: 21300000, guid: 00a9ff24b9cb341569cb21e78d2754d9,
+        type: 3}
     - target: {fileID: 1862658398809434899, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
         type: 3}
       propertyPath: homeNode
       value: 
       objectReference: {fileID: 311305518}
+    - target: {fileID: 1862658398809434899, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
+        type: 3}
+      propertyPath: eyesRight
+      value: 
+      objectReference: {fileID: 21300000, guid: 65aa0a5451d1c4cc9b9c03ecf07f3120,
+        type: 3}
+    - target: {fileID: 1862658398809434899, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
+        type: 3}
+      propertyPath: ghostHouse
+      value: 
+      objectReference: {fileID: 1577672372}
+    - target: {fileID: 1862658398809434899, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
+        type: 3}
+      propertyPath: startingPosition
+      value: 
+      objectReference: {fileID: 1577672372}
     - target: {fileID: 6999473626826123138, guid: 43b14fc000e194f03bf83b7e0a2bd88e,
         type: 3}
       propertyPath: m_RootOrder
@@ -32204,7 +33199,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: clyde
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 388312936, guid: 43b14fc000e194f03bf83b7e0a2bd88e, type: 3}
+    - {fileID: 388312935, guid: 43b14fc000e194f03bf83b7e0a2bd88e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 43b14fc000e194f03bf83b7e0a2bd88e, type: 3}
 --- !u!1 &6999473627041794283 stripped
 GameObject:
@@ -32221,9 +33218,59 @@ MonoBehaviour:
   m_GameObject: {fileID: 6999473627041794283}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 421b3c3e7347e4c87bd83e043fc26e9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 3298ba713c7af4123a60440f17ebd42f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frightenedSpeed: 2.9
-  currentMode: 1
-  frightenedModeTimer: 0
+--- !u!114 &6999473627041794286
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999473627041794283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 266b8179d9f8468580f335dc0d822a12, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6999473627041794287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999473627041794283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42d0352d73cd4c0d903ce210c7414622, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6999473627041794294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999473627041794283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e38201359b0f4f37beb474098e3bc08b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5.9
+  currentNode: {fileID: 0}
+  targetNode: {fileID: 0}
+  previousNode: {fileID: 0}
+  nextDirection: {x: 0, y: 0}
+--- !u!114 &6999473627041794295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999473627041794283}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0ff91df84b040d1b34d4f09c5c04c4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -7,7 +7,8 @@ using UnityEngine.Serialization;
 public class Node : MonoBehaviour
 {
     [SerializeField] public Node[] neighbours;
-    [FormerlySerializedAs("_validDirections")] public Vector2[] validDirections;
+    
+    public Vector2[] validDirections;
     
     // Start is called before the first frame update
     private void Start()

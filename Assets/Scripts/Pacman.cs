@@ -5,30 +5,39 @@ using UnityEngine.Serialization;
 
 public class Pacman : MonoBehaviour
 {
-    private Vector2 _direction = Vector2.zero;
-    private GameBoard _gameBoard;
-    private Orientation _pacmanOrientation;
+    private PacmanOrientation _pacmanOrientation;
     private PacmanAnimation _animation;
-    private Consume _consumePellet;
-    private Move _pacmanMovement;
+    private PacmanConsume _pacmanConsume;
+    private PacmanMove _pacmanMovement;
+    
+    public Node startingPosition;
+    public Vector2 direction = Vector2.zero;
 
     private void Start()
     {
-        _gameBoard = GameObject.Find("game").GetComponent<GameBoard>();
-        _pacmanOrientation = GetComponent<Orientation>();
+        direction = Vector2.right;
+        _pacmanOrientation = GetComponent<PacmanOrientation>();
         _animation = GetComponent<PacmanAnimation>();
-        _consumePellet = GetComponent<Consume>();
-        _pacmanMovement = GetComponent<Move>();
-        _pacmanMovement.ChangePacmanPosition(_direction);
+        _pacmanConsume = GetComponent<PacmanConsume>();
+        _pacmanMovement = GetComponent<PacmanMove>();
     }
 
     private void Update()
     {
-        _direction = _pacmanMovement.MovePacman();
-        _pacmanOrientation.UpdateOrientation(_direction);
-        _animation.UpdateAnimation(_direction);
-        _consumePellet.ConsumePellet(_gameBoard);
-        
+        _pacmanMovement.MoveSprite();
+        _pacmanOrientation.UpdateOrientation(direction);
+        _animation.UpdateAnimation(direction);
+        _pacmanConsume.ConsumePellet();
         _pacmanMovement.CheckInput();
+    }
+
+    public void Restart()
+    {
+        transform.position = startingPosition.transform.position;
+        _pacmanMovement.currentNode = startingPosition;
+        direction = Vector2.right;
+        _pacmanOrientation.UpdateOrientation(direction);
+        _pacmanMovement.nextDirection = direction;
+        _pacmanMovement.ChangePacmanPosition(direction);
     }
 }

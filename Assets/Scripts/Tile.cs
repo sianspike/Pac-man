@@ -7,4 +7,6 @@ public class Tile : MonoBehaviour
     public bool isPellet;
     public bool isSuperPellet;
     public bool consumed;
+    public bool isGhostHouseEntrance;
+    public bool isGhostHouse;
 }

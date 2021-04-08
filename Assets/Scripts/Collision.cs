@@ -7,14 +7,14 @@ public class Collision : MonoBehaviour
     private SpriteRenderer _spriteRenderer;
     private GameObject _pacman;
     private SpriteRenderer _pacmanSpriteRenderer;
-    private Consume _consume;
+    private GhostConsume _ghostConsume;
 
     private void Start()
     {
         _spriteRenderer = transform.GetComponent<SpriteRenderer>();
         _pacman = GameObject.FindGameObjectWithTag("pacman");
         _pacmanSpriteRenderer = _pacman.GetComponent<SpriteRenderer>();
-        _consume = GetComponent<Consume>();
+        _ghostConsume = GetComponent<GhostConsume>();
     }
 
     public void CheckCollision(GhostMode mode)
@@ -26,7 +26,11 @@ public class Collision : MonoBehaviour
         {
             if (mode.currentMode == Mode.Frightened)
             {
-                _consume.Consumed();
+                _ghostConsume.Consumed();
+            }
+            else
+            {
+                GameBoard.Instance.Restart();
             }
         }
     }    

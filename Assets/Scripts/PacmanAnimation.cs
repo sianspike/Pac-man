@@ -2,17 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PacmanAnimation : MonoBehaviour
+public class PacmanAnimation : SpriteAnimation
 {
     [SerializeField] public Sprite nonMovingPacman;
-    
-    private Animator _animator;
-    private SpriteRenderer _spriteRenderer;
 
-    private void Start()
+    private new void Start()
     {
-        _animator = GetComponent<Animator>();
-        _spriteRenderer = GetComponent<SpriteRenderer>();
+        base.Start();
     }
     
     public void UpdateAnimation(Vector2 direction)
@@ -20,12 +16,12 @@ public class PacmanAnimation : MonoBehaviour
         //pacman not moving
         if (direction == Vector2.zero)
         {
-            _animator.enabled = false;
-            _spriteRenderer.sprite = nonMovingPacman;
+            Animator.enabled = false;
+            SpriteRenderer.sprite = nonMovingPacman;
         }
         else
         {
-            _animator.enabled = true;
+            Animator.enabled = true;
         }
     }
 }
