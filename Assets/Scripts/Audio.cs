@@ -8,10 +8,11 @@ public class Audio : MonoBehaviour
     [SerializeField] public AudioClip chomp2;
     [SerializeField] public AudioClip normalBackgroundAudio;
     [SerializeField] public AudioClip frightenedBackgroundAudio;
+    [SerializeField] public AudioClip pacmanDeathBackgroundAudio;
     
     private bool _playedChomp1;
     private AudioSource _audio;
-    
+
     // Start is called before the first frame update
     private void Start()
     {

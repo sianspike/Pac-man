@@ -121,8 +121,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c923dd28460164991be60430dedea382, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}
   nonMovingPacman: {fileID: -6846246853087037126, guid: 0e2c3d3ee0b3b47d6a87e0744af6d09c,
     type: 3}
+  chompAnimation: {fileID: 9100000, guid: 55e5cd8e55fd0461ca84dc5fdc90d872, type: 2}
+  deathAnimation: {fileID: 9100000, guid: 6a4ecd2ac22f64018afaa0a3c5435d1b, type: 2}
 --- !u!114 &1794540559
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -137,6 +141,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingPosition: {fileID: 0}
   direction: {x: 0, y: 0}
+  canMove: 1
 --- !u!82 &1794540561
 AudioSource:
   m_ObjectHideFlags: 0

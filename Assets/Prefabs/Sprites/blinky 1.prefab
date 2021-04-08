@@ -124,6 +124,7 @@ MonoBehaviour:
   blinkTimer: 0
   ghostIsWhite: 0
   startingPosition: {fileID: 0}
+  canMove: 1
   direction: {x: 0, y: 0}
 --- !u!95 &1149000720
 Animator:
@@ -229,3 +230,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ff91df84b040d1b34d4f09c5c04c4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 0}
+  animator: {fileID: 0}

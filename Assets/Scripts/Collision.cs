@@ -30,7 +30,10 @@ public class Collision : MonoBehaviour
             }
             else
             {
-                GameBoard.Instance.Restart();
+                if (mode.currentMode != Mode.Consumed)
+                {
+                    GameBoard.Instance.StartDeath();
+                }
             }
         }
     }    
