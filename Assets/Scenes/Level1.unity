@@ -6462,7 +6462,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 490ef8a8d95d44abbbb83688af970b1a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 70218d3281dbb41b18efcd0f81d91573, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -6566,8 +6566,7 @@ MonoBehaviour:
     type: 3}
   frightenedBackgroundAudio: {fileID: 8300000, guid: 40c1c9d1b744a4a438712dc1afbb8a9b,
     type: 3}
-  pacmanDeathBackgroundAudio: {fileID: 8300000, guid: bcc1aa2c630884ab78f2b37f3332abaf,
-    type: 3}
+  pacmanDeathBackgroundAudio: {fileID: 0}
 --- !u!1 &443167900 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4594826578037575020, guid: 34b79518dff024a2a94a7ab310131656,
@@ -7487,7 +7486,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 30, y: 17, z: -10}
+  m_LocalPosition: {x: 23, y: 17, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

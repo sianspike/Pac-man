@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ContentModelUserStore">
+  <component name="UserContentModel">
     <attachedFolders />
     <explicitIncludes>
       <Path>Library/PackageCache/com.unity.2d.animation@5.0.4</Path>
@@ -29,7 +29,6 @@
       <Path>.idea</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
-      <Path>Temp</Path>
       <Path>UIElementsSchema</Path>
       <Path>UserSettings</Path>
       <Path>obj</Path>
