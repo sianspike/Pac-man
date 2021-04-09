@@ -1,11 +1,13 @@
 using UnityEngine;
 
-public class Move : MonoBehaviour 
+public class Move : MonoBehaviour
 {
     [SerializeField] public float speed;
 
     public Node currentNode, targetNode, previousNode;
     public Vector2 nextDirection;
+    public Node startingPosition;
+    public Vector2 direction = Vector2.zero;
 
     protected void Start()
     {
@@ -20,8 +22,8 @@ public class Move : MonoBehaviour
 
     public Node GetNodeAtPosition(Vector2 position)
     {
-        var tile = GameBoard.Instance.Board[(int) position.x, (int) position.y];
-        
+        var tile = GameBoard.instance.Board[(int) position.x, (int) position.y];
+
         return tile != null ? tile.GetComponent<Node>() : null;
     }
 
@@ -39,12 +41,12 @@ public class Move : MonoBehaviour
 
         return nodeToSelf > nodeToTarget;
     }
-    
+
     public GameObject GetTileAtPosition(Vector2 position)
     {
         var tileX = Mathf.RoundToInt(position.x);
         var tileY = Mathf.RoundToInt(position.y);
-        var tile = GameBoard.Instance.Board[tileX, tileY];
+        var tile = GameBoard.instance.Board[tileX, tileY];
 
         if (tile != null)
         {
@@ -53,4 +55,10 @@ public class Move : MonoBehaviour
 
         return null;
     }
+
+    protected void MoveToStartingPosition()
+    {
+        transform.position = startingPosition.transform.position;
+    }
+
 }

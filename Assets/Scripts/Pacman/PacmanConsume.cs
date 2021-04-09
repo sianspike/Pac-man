@@ -31,7 +31,7 @@ public class PacmanConsume: MonoBehaviour
         {
             tileObject.GetComponent<SpriteRenderer>().enabled = false;
             tile.consumed = true;
-            GameBoard.Instance.score++;
+            GameBoard.instance.score++;
             _pelletsConsumed++;
             _audio.PlayChompSound();
 

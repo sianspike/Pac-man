@@ -27,11 +27,9 @@ namespace Ghosts
         public int startBlinkingAt = 7;
         public float blinkTimer;
         public bool ghostIsWhite;
-        public Node startingPosition;
         public bool canMove = true;
     
         private GhostMove _ghostMovement;
-        public Vector2 direction = Vector2.zero;
         private GhostMode _mode;
         private Collision _collision;
         private GhostAnimation _ghostAnimation;
@@ -51,9 +49,9 @@ namespace Ghosts
             if (canMove)
             {
                 _mode.ModeUpdate();
-                direction = _ghostMovement.MoveSprite();
-                _ghostOrientation.UpdateOrientation(direction);
-                _ghostAnimation.UpdateAnimation(direction);
+                _ghostMovement.direction = _ghostMovement.MoveSprite();
+                _ghostOrientation.UpdateOrientation(_ghostMovement.direction);
+                _ghostAnimation.UpdateAnimation(_ghostMovement.direction);
                 _ghostMovement.ReleaseGhosts();
                 _collision.CheckCollision(_mode);
                 IsInGhostHouse();
@@ -81,8 +79,8 @@ namespace Ghosts
                             if (node != null)
                             {
                                 _ghostMovement.currentNode = node;
-                                direction = Vector2.up;
-                                _ghostAnimation.UpdateAnimation(direction);
+                                _ghostMovement.direction = Vector2.up;
+                                _ghostAnimation.UpdateAnimation(_ghostMovement.direction);
                                 _ghostMovement.targetNode = _ghostMovement.currentNode.neighbours[0];
                                 _ghostMovement.previousNode = _ghostMovement.currentNode;
                                 _mode.currentMode = Mode.Chase;
@@ -96,35 +94,23 @@ namespace Ghosts
         public void Restart()
         {
             canMove = true;
-            _ghostAnimation.spriteRenderer.enabled = true;
             _mode.currentMode = Mode.Scatter;
             _ghostMovement.speed = _mode.normalSpeed;
             _mode.previousSpeed = 0;
-            transform.position = startingPosition.transform.position;
             ghostReleaseTimer = 0;
             _mode.modeChangeIteration = 1;
             _mode.modeChangeTimer = 0;
 
-            if (transform.name != "blinky")
-            {
-                isInGhostHouse = true;
-            }
-
-            _ghostMovement.currentNode = startingPosition;
-
             if (isInGhostHouse)
             {
-                direction = Vector2.up;
+                _ghostMovement.direction = Vector2.up;
                 _ghostMovement.targetNode = _ghostMovement.currentNode.neighbours[0];
             }
             else
             {
-                direction = Vector2.right;
+                _ghostMovement.direction = Vector2.right;
                 _ghostMovement.targetNode = _ghostMovement.ChooseNextNode();
             }
-
-            _ghostMovement.previousNode = _ghostMovement.currentNode;
-            _ghostAnimation.UpdateAnimation(direction);
         }
     }
 }

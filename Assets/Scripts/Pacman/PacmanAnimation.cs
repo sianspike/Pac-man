@@ -50,7 +50,7 @@ namespace Pacman
 
             yield return new WaitForSeconds(delay);
 
-            StartCoroutine(GameBoard.Instance.ProcessRestart(2));
+            StartCoroutine(GameBoard.instance.ProcessRestart(1));
         }
     }
 }

@@ -8,6 +8,7 @@ namespace Ghosts
         private Ghost _ghost;
         private Pacman.Pacman _pacman;
         private GhostMode _ghostMode;
+        private GhostAnimation _animation;
 
         private new void Start()
         { 
@@ -16,16 +17,17 @@ namespace Ghosts
             _ghost = transform.GetComponent<Ghost>();
             _pacman = FindObjectOfType<Pacman.Pacman>();
             _ghostMode = transform.GetComponent<GhostMode>();
-            _ghost.startingPosition = currentNode;
+            _animation = transform.GetComponent<GhostAnimation>();
+            startingPosition = currentNode;
 
             if (_ghost.isInGhostHouse)
             {
-                _ghost.direction = Vector2.up;
+                direction = Vector2.up;
                 targetNode = currentNode.neighbours[0];
                 
             } else
             {
-                _ghost.direction = Vector2.right;
+                direction = Vector2.right;
                 targetNode = ChooseNextNode();
             }
         }
@@ -44,13 +46,13 @@ namespace Ghosts
                 }
                 else
                 {
-                    transform.localPosition += (Vector3) _ghost.direction * (speed * Time.deltaTime); 
+                    transform.localPosition += (Vector3) direction * (speed * Time.deltaTime); 
                 }
             }
         
-            return _ghost.direction;
+            return direction;
         }
-        
+
         public Node ChooseNextNode()
         {
             Node moveToNode = null;
@@ -79,7 +81,7 @@ namespace Ghosts
 
             for (var i = 0; i < currentNode.neighbours.Length; i++)
             {
-                if (currentNode.validDirections[i] != _ghost.direction * -1)
+                if (currentNode.validDirections[i] != direction * -1)
                 {
                     if (_ghostMode.currentMode != Mode.Consumed)
                     {
@@ -113,7 +115,7 @@ namespace Ghosts
             if (foundNeighbours.Length == 1)
             {
                 moveToNode = foundNeighbours[0];
-                _ghost.direction = foundNeighboursDirection[0];
+                direction = foundNeighboursDirection[0];
             }
 
             if (foundNeighbours.Length > 1)
@@ -131,7 +133,7 @@ namespace Ghosts
                     
                     leastDistance = distance;
                     moveToNode = foundNeighbours[i];
-                    _ghost.direction = foundNeighboursDirection[i];
+                    direction = foundNeighboursDirection[i];
                 }
             }
         
@@ -283,6 +285,21 @@ namespace Ghosts
             var y = Random.Range(0, 31);
 
             return new Vector2(x, y);
+        }
+        
+        public new void MoveToStartingPosition()
+        {
+            base.MoveToStartingPosition();
+            
+            currentNode = startingPosition;
+            previousNode = currentNode;
+
+            _animation.UpdateAnimation(direction);
+            
+            if (transform.name != "blinky")
+            {
+                _ghost.isInGhostHouse = true;
+            }
         }
     }
 }

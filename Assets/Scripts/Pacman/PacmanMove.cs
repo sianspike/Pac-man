@@ -4,14 +4,17 @@ namespace Pacman
 {
     public class PacmanMove: Move
     {
-        private global::Pacman.Pacman _pacman;
+        private PacmanAnimation _animation;
+        private PacmanOrientation _orientation;
         
         private new void Start()
         { 
             base.Start();
-            _pacman = transform.GetComponent<global::Pacman.Pacman>();
-            _pacman.direction = Vector2.right;
-            targetNode = PacmanCanMove(_pacman.direction);
+            
+            _animation = transform.GetComponent<PacmanAnimation>();
+            _orientation = transform.GetComponent<PacmanOrientation>();
+            direction = Vector2.right;
+            targetNode = PacmanCanMove(direction);
         }
         
         public void CheckInput()
@@ -38,10 +41,10 @@ namespace Pacman
         {
             if (targetNode != currentNode || !ReferenceEquals(targetNode, null))
             {
-                //if pacman wants to move in opposite direction before node is reached
-                if (nextDirection == _pacman.direction * -1)
+                //if pacman wants to move in opposite inDirection before node is reached
+                if (nextDirection == direction * -1)
                 {
-                    _pacman.direction *= -1;
+                    direction *= -1;
                 
                     var temporaryNode = targetNode;
                             
@@ -58,12 +61,12 @@ namespace Pacman
                             
                     if (!ReferenceEquals(moveToNode, null))
                     {
-                        _pacman.direction = nextDirection;
+                        direction = nextDirection;
                     }
                             
                     if (ReferenceEquals(moveToNode, null))
                     {
-                        moveToNode = PacmanCanMove(_pacman.direction);
+                        moveToNode = PacmanCanMove(direction);
                     }
                             
                     if (!ReferenceEquals(moveToNode, null))
@@ -74,25 +77,25 @@ namespace Pacman
                     }
                     else
                     {
-                        _pacman.direction = Vector2.zero;
+                        direction = Vector2.zero;
                     }
                 }
                 else
                 {
-                    transform.localPosition += (Vector3) (_pacman.direction * speed) * Time.deltaTime;
+                    transform.localPosition += (Vector3) (direction * speed) * Time.deltaTime;
                 }
             }
         }
         
-        private Node PacmanCanMove(Vector2 direction)
+        private Node PacmanCanMove(Vector2 inDirection)
         {
             Node moveToNode = null;
 
             //iterate over neighbours of pellet
             for (var i = 0; i < currentNode.neighbours.Length; i++)
             {
-                //check if current direction of pacman is valid
-                if (currentNode.validDirections[i] != direction) continue;
+                //check if current inDirection of pacman is valid
+                if (currentNode.validDirections[i] != inDirection) continue;
             
                 moveToNode = currentNode.neighbours[i];
             
@@ -104,7 +107,7 @@ namespace Pacman
 
         public void ChangePacmanPosition(Vector2 targetDirection)
         {
-            if (targetDirection != _pacman.direction)
+            if (targetDirection != direction)
             {
                 nextDirection = targetDirection;
             }
@@ -115,12 +118,27 @@ namespace Pacman
 
                 if (!ReferenceEquals(moveToNode, null))
                 {
-                    _pacman.direction = targetDirection;
+                    direction = targetDirection;
                     targetNode = moveToNode;
                     previousNode = currentNode;
                     currentNode = null;
                 }
             }
+        }
+
+        public new void MoveToStartingPosition()
+        {
+            base.MoveToStartingPosition();
+            
+            direction = Vector2.right;
+            currentNode = startingPosition;
+            nextDirection = direction;
+            
+            _animation.animator.runtimeAnimatorController = _animation.chompAnimation;
+            _animation.animator.enabled = true;
+            
+            _orientation.UpdateOrientation(direction);
+            ChangePacmanPosition(direction);
         }
     }
 }
