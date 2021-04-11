@@ -13,6 +13,11 @@ public class GameBoard : MonoBehaviour
     [SerializeField] public int lives = 3;
     [SerializeField] public Text playerText;
     [SerializeField] public Text readyText;
+    [SerializeField] public Text scoreTitleText;
+    [SerializeField] public Text scoreText;
+    [SerializeField] public Text consumedGhostScoreText;
+    [SerializeField] public Image twoLivesImage;
+    [SerializeField] public Image threeLivesImage;
     
     //number of units
     private const int BoardWidth = 31;
@@ -57,7 +62,7 @@ public class GameBoard : MonoBehaviour
         _pacmanSpriteRenderer = _pacman.transform.GetComponent<SpriteRenderer>();
         _audio = transform.GetComponent<Audio>();
         _pacmanMove = _pacman.transform.GetComponent<PacmanMove>();
-        
+
         var gameObjects = FindObjectsOfType(typeof(GameObject));
 
         foreach (var o in gameObjects)
@@ -84,6 +89,32 @@ public class GameBoard : MonoBehaviour
         StartGame();
     }
 
+    private void Update()
+    {
+        UpdateUI();
+    }
+
+    private void UpdateUI()
+    {
+        scoreText.text = score.ToString();
+
+        if (lives == 3)
+        {
+            threeLivesImage.enabled = true;
+            twoLivesImage.enabled = true;
+
+        } else if (lives == 2)
+        {
+            threeLivesImage.enabled = false;
+            twoLivesImage.enabled = true;
+
+        } else if (lives == 1)
+        {
+            threeLivesImage.enabled = false;
+            twoLivesImage.enabled = false;
+        }
+    }
+
     private void Restart()
     {
         readyText.enabled = false;
@@ -104,6 +135,8 @@ public class GameBoard : MonoBehaviour
     {
         if (!_didStartDeath)
         {
+            StopAllCoroutines();
+            
             _didStartDeath = true;
             
             foreach (var ghost in _ghostObjects)
@@ -205,5 +238,14 @@ public class GameBoard : MonoBehaviour
         yield return new WaitForSeconds(delay);
         
         Restart();
+    }
+
+    private IEnumerator StartBlinking(Text text)
+    {
+        yield return new WaitForSeconds(0.25f);
+
+        text.enabled = !text.enabled;
+
+        StartCoroutine(StartBlinking(text));
     }
 }

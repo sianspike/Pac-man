@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Audio : MonoBehaviour
 {
@@ -9,7 +10,8 @@ public class Audio : MonoBehaviour
     [SerializeField] public AudioClip normalBackgroundAudio;
     [SerializeField] public AudioClip frightenedBackgroundAudio;
     [SerializeField] public AudioClip pacmanDeathBackgroundAudio;
-    
+    [SerializeField] public AudioClip consumedGhostAudio;
+
     private bool _playedChomp1;
     private AudioSource _audio;
 

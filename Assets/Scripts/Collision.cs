@@ -1,4 +1,5 @@
 using System;
+using Ghosts;
 using ScriptResources;
 using UnityEngine;
 
