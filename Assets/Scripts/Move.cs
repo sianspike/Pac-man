@@ -22,7 +22,7 @@ public class Move : MonoBehaviour
 
     public Node GetNodeAtPosition(Vector2 position)
     {
-        var tile = GameBoard.instance.Board[(int) position.x, (int) position.y];
+        var tile = GameBoard.instance.board[(int) position.x, (int) position.y];
 
         return tile != null ? tile.GetComponent<Node>() : null;
     }
@@ -46,7 +46,7 @@ public class Move : MonoBehaviour
     {
         var tileX = Mathf.RoundToInt(position.x);
         var tileY = Mathf.RoundToInt(position.y);
-        var tile = GameBoard.instance.Board[tileX, tileY];
+        var tile = GameBoard.instance.board[tileX, tileY];
 
         if (tile != null)
         {

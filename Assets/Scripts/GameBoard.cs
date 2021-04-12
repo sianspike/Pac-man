@@ -1,10 +1,9 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using Ghosts;
 using Pacman;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameBoard : MonoBehaviour
 {
@@ -35,7 +34,7 @@ public class GameBoard : MonoBehaviour
 
     private const float DeathAudioLength = 1.9f;
 
-    public readonly GameObject[,] Board = new GameObject[BoardWidth, BoardHeight];
+    public readonly GameObject[,] board = new GameObject[BoardWidth, BoardHeight];
     public int score = 0;
 
     private void Awake()
@@ -82,7 +81,7 @@ public class GameBoard : MonoBehaviour
             if (go.name != "pacman" && go.name != "maze" && go.name != "nodes" && go.name != "non_nodes" &&
                 go.name != "pellets" && !go.CompareTag("ghost") && !go.CompareTag("ghost_home") && !go.CompareTag("ui"))
             {
-                Board[(int) position.x, (int) position.y] = go;
+                board[(int) position.x, (int) position.y] = go;
             }
         }
         
@@ -119,7 +118,6 @@ public class GameBoard : MonoBehaviour
     {
         readyText.enabled = false;
         _didStartDeath = false;
-        lives--;
         _pacman.Restart();
 
         foreach (var ghost in _ghostObjects)
@@ -167,15 +165,28 @@ public class GameBoard : MonoBehaviour
 
     public IEnumerator ProcessRestart(float delay)
     {
+        lives--;
         playerText.enabled = true;
-        readyText.enabled = true;
         _pacmanSpriteRenderer.enabled = false;
         
         _audioSource.Stop();
 
-        yield return new WaitForSeconds(delay);
+        if (lives == 0)
+        {
+            readyText.text = "GAME OVER!";
+            readyText.color = Color.red;
+            readyText.enabled = true;
 
-        StartCoroutine(ShowSpritesAndRestartAfter(1));
+            StartCoroutine(ProcessGameOver(2));
+        }
+        else
+        { 
+            readyText.enabled = true;
+            
+            yield return new WaitForSeconds(delay);
+
+            StartCoroutine(ShowSpritesAndRestartAfter(1));
+        }
     }
 
     private void StartGame()
@@ -240,12 +251,10 @@ public class GameBoard : MonoBehaviour
         Restart();
     }
 
-    private IEnumerator StartBlinking(Text text)
+    private IEnumerator ProcessGameOver(float delay)
     {
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(delay);
 
-        text.enabled = !text.enabled;
-
-        StartCoroutine(StartBlinking(text));
+        SceneManager.LoadScene("GameMenu");
     }
 }
