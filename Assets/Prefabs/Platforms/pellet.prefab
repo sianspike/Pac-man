@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8668139728756215850}
   - component: {fileID: 5512264432386053317}
+  - component: {fileID: 87856359}
+  - component: {fileID: 87856360}
   m_Layer: 0
   m_Name: pellet
   m_TagString: Untagged
@@ -82,3 +84,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &87856359
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594826578037575020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a11277069053141aaa4b20d9488daf55, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  neighbours:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  validDirections: []
+--- !u!114 &87856360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4594826578037575020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc23b7e1de83d438283b13a8c5d7bf4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPellet: 1
+  isSuperPellet: 0
+  consumed: 0
+  isGhostHouseEntrance: 0
+  isGhostHouse: 0

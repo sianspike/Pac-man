@@ -18,7 +18,8 @@ namespace Ghosts
             _pacman = FindObjectOfType<Pacman.Pacman>();
             _ghostMode = transform.GetComponent<GhostMode>();
             _animation = transform.GetComponent<GhostAnimation>();
-            startingPosition = currentNode;
+            currentNode = startingPosition;
+            previousNode = startingPosition;
 
             if (_ghost.isInGhostHouse)
             {
@@ -49,7 +50,7 @@ namespace Ghosts
                     transform.localPosition += (Vector3) direction * (speed * Time.deltaTime); 
                 }
             }
-        
+
             return direction;
         }
 
@@ -240,6 +241,7 @@ namespace Ghosts
             if (_ghost.ghostType == GhostType.Pinky && _ghost.isInGhostHouse)
             {
                 _ghost.isInGhostHouse = false;
+                targetNode = currentNode.neighbours[0];
             }
         }
 

@@ -21,7 +21,6 @@ public class GameBoard : MonoBehaviour
     //number of units
     private const int BoardWidth = 31;
     private const int BoardHeight = 31;
-    private int _totalPellets = 0;
     private Pacman.Pacman _pacman;
     private GameObject[] _ghostObjects;
     private bool _didStartDeath;
@@ -31,11 +30,18 @@ public class GameBoard : MonoBehaviour
     private SpriteRenderer _pacmanSpriteRenderer;
     private Audio _audio;
     private PacmanMove _pacmanMove;
+    private PacmanConsume _pacmanConsume;
+    private static int _currentLevel = 1;
+    private bool _shouldBlink = false;
+    private float _blinkIntervalTime = 0.1f;
+    private float _blinkIntervalTimer = 0;
+    private SpriteRenderer _mazeSpriteRenderer;
 
     private const float DeathAudioLength = 1.9f;
 
     public readonly GameObject[,] board = new GameObject[BoardWidth, BoardHeight];
-    public int score = 0;
+    public static int score = 0;
+    public int totalPellets = 0;
 
     private void Awake()
     {
@@ -61,6 +67,8 @@ public class GameBoard : MonoBehaviour
         _pacmanSpriteRenderer = _pacman.transform.GetComponent<SpriteRenderer>();
         _audio = transform.GetComponent<Audio>();
         _pacmanMove = _pacman.transform.GetComponent<PacmanMove>();
+        _pacmanConsume = _pacman.GetComponent<PacmanConsume>();
+        _mazeSpriteRenderer = GameObject.Find("maze").GetComponent<SpriteRenderer>();
 
         var gameObjects = FindObjectsOfType(typeof(GameObject));
 
@@ -74,10 +82,10 @@ public class GameBoard : MonoBehaviour
             {
                 if (tile.isPellet || tile.isSuperPellet)
                 {
-                    _totalPellets++;
+                    totalPellets++;
                 }
             }
-            
+
             if (go.name != "pacman" && go.name != "maze" && go.name != "nodes" && go.name != "non_nodes" &&
                 go.name != "pellets" && !go.CompareTag("ghost") && !go.CompareTag("ghost_home") && !go.CompareTag("ui"))
             {
@@ -91,6 +99,8 @@ public class GameBoard : MonoBehaviour
     private void Update()
     {
         UpdateUI();
+        _pacmanConsume.CheckPelletsConsumed();
+        BoardShouldBlink();
     }
 
     private void UpdateUI()
@@ -256,5 +266,77 @@ public class GameBoard : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
         SceneManager.LoadScene("GameMenu");
+    }
+
+    public void PlayerWon()
+    {
+        _currentLevel++;
+
+        StartCoroutine(ProcessWin(2));
+    }
+
+    private IEnumerator ProcessWin(float delay)
+    {
+        _pacman.canMove = false;
+        _pacmanAnimation.enabled = false;
+        
+        _audioSource.Stop();
+        
+        foreach (var ghost in _ghostObjects)
+        {
+            ghost.transform.GetComponent<Ghost>().canMove = false;
+            ghost.transform.GetComponent<Animator>().enabled = false;
+        }
+
+        yield return new WaitForSeconds(delay);
+
+        StartCoroutine(BlinkBoard(2));
+    }
+
+    private IEnumerator BlinkBoard(float delay)
+    {
+        _pacmanSpriteRenderer.enabled = false;
+        
+        foreach (var ghost in _ghostObjects)
+        {
+            ghost.transform.GetComponent<SpriteRenderer>().enabled = false;
+        }
+
+        _shouldBlink = true;
+
+        yield return new WaitForSeconds(delay);
+
+        _shouldBlink = false;
+        
+        StartNextLevel();
+    }
+
+    private void BoardShouldBlink()
+    {
+        if (_shouldBlink)
+        {
+            if (_blinkIntervalTimer < _blinkIntervalTime)
+            {
+                _blinkIntervalTimer += Time.deltaTime;
+            }
+            else
+            {
+                _blinkIntervalTimer = 0;
+
+                if (_mazeSpriteRenderer.enabled)
+                {
+                    _mazeSpriteRenderer.enabled = false;
+                }
+                else
+                {
+                    _mazeSpriteRenderer.enabled = true;
+                }
+            }
+        }
+    }
+
+    private void StartNextLevel()
+    {
+        SceneManager.LoadScene("Level1");
     }
 }

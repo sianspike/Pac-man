@@ -32,7 +32,7 @@ namespace Pacman
             {
                 tileObject.GetComponent<SpriteRenderer>().enabled = false;
                 tile.consumed = true;
-                GameBoard.instance.score += 10;
+                GameBoard.score += 10;
                 _pelletsConsumed++;
                 
                 _audio.PlayChompSound();
@@ -44,6 +44,14 @@ namespace Pacman
                         ghost.GetComponent<GhostMode>().StartFrightenedMode();
                     }
                 }
+            }
+        }
+
+        public void CheckPelletsConsumed()
+        {
+            if (GameBoard.instance.totalPellets == _pelletsConsumed)
+            {
+                GameBoard.instance.PlayerWon();
             }
         }
     }
