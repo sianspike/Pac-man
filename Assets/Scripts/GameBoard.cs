@@ -1,6 +1,8 @@
 using System.Collections;
+using System.Diagnostics;
 using Ghosts;
 using Pacman;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
@@ -36,6 +38,7 @@ public class GameBoard : MonoBehaviour
     private float _blinkIntervalTime = 0.1f;
     private float _blinkIntervalTimer = 0;
     private SpriteRenderer _mazeSpriteRenderer;
+    private bool _didIncrementLevel = false;
 
     private const float DeathAudioLength = 1.9f;
 
@@ -91,6 +94,11 @@ public class GameBoard : MonoBehaviour
             {
                 board[(int) position.x, (int) position.y] = go;
             }
+        }
+
+        if (_currentLevel == 1)
+        {
+            _audioSource.Play();
         }
         
         StartGame();
@@ -270,7 +278,11 @@ public class GameBoard : MonoBehaviour
 
     public void PlayerWon()
     {
-        _currentLevel++;
+        if (!_didIncrementLevel)
+        {
+            _didIncrementLevel = true;
+            _currentLevel++;
+        }
 
         StartCoroutine(ProcessWin(2));
     }
@@ -308,7 +320,7 @@ public class GameBoard : MonoBehaviour
 
         _shouldBlink = false;
         
-        StartNextLevel();
+        EndOfLevelMenu();
     }
 
     private void BoardShouldBlink()
@@ -337,6 +349,131 @@ public class GameBoard : MonoBehaviour
 
     private void StartNextLevel()
     {
+        _didIncrementLevel = false;
+        SetDifficultyForLevel(_currentLevel);
         SceneManager.LoadScene("Level1");
+    }
+
+    private void EndOfLevelMenu()
+    {
+        SceneManager.LoadScene("EndOfLevel");
+    }
+
+    private void SetDifficultyForLevel(int level)
+    {
+        switch (level)
+        {
+            case 2:
+                _pacmanMove.speed = 7;
+                
+                foreach (var ghost in _ghostObjects)
+                {
+                    var ghostMode = ghost.GetComponent<GhostMode>();
+                    var ghostSelf = ghost.GetComponent<Ghost>();
+                    var ghostMove = ghost.GetComponent<GhostMove>();
+                    ghostMode.scatterModeTimer1 = 7;
+                    ghostMode.scatterModeTimer2 = 7;
+                    ghostMode.scatterModeTimer3 = 5;
+                    ghostMode.scatterModeTimer4 = 1;
+                    ghostMode.chaseModeTimer1 = 20;
+                    ghostMode.chaseModeTimer2 = 20;
+                    ghostMode.chaseModeTimer3 = 1000;
+                    ghostMode.frightenedModeDuration = 9;
+                    ghostSelf.startBlinkingAt = 6;
+                    ghostSelf.pinkyReleaseTimer = 4;
+                    ghostSelf.inkyReleaseTimer = 12;
+                    ghostSelf.clydeReleaseTimer = 18;
+                    ghostMove.speed = 6.9f;
+                    ghostMode.normalSpeed = 6.9f;
+                    ghostMode.frightenedSpeed = 3.9f;
+                    ghostMode.consumedSpeed = 18f;
+                }
+                
+                break;
+                
+            case 3:
+                _pacmanMove.speed = 8;
+                                
+                foreach (var ghost in _ghostObjects)
+                {
+                    var ghostMode = ghost.GetComponent<GhostMode>();
+                    var ghostSelf = ghost.GetComponent<Ghost>();
+                    var ghostMove = ghost.GetComponent<GhostMove>();
+                    ghostMode.scatterModeTimer1 = 7;
+                    ghostMode.scatterModeTimer2 = 7;
+                    ghostMode.scatterModeTimer3 = 5;
+                    ghostMode.scatterModeTimer4 = 1;
+                    ghostMode.chaseModeTimer1 = 20;
+                    ghostMode.chaseModeTimer2 = 20;
+                    ghostMode.chaseModeTimer3 = 1000;
+                    ghostMode.frightenedModeDuration = 8;
+                    ghostSelf.startBlinkingAt = 5;
+                    ghostSelf.pinkyReleaseTimer = 3;
+                    ghostSelf.inkyReleaseTimer = 10;
+                    ghostSelf.clydeReleaseTimer = 15;
+                    ghostMove.speed = 7.9f;
+                    ghostMode.normalSpeed = 7.9f;
+                    ghostMode.frightenedSpeed = 4.9f;
+                    ghostMode.consumedSpeed = 20f;
+                }
+                
+                break;
+                
+            case 4:
+                _pacmanMove.speed = 9;
+                                
+                foreach (var ghost in _ghostObjects)
+                {
+                    var ghostMode = ghost.GetComponent<GhostMode>();
+                    var ghostSelf = ghost.GetComponent<Ghost>();
+                    var ghostMove = ghost.GetComponent<GhostMove>();
+                    ghostMode.scatterModeTimer1 = 7;
+                    ghostMode.scatterModeTimer2 = 7;
+                    ghostMode.scatterModeTimer3 = 5;
+                    ghostMode.scatterModeTimer4 = 1;
+                    ghostMode.chaseModeTimer1 = 20;
+                    ghostMode.chaseModeTimer2 = 20;
+                    ghostMode.chaseModeTimer3 = 1000;
+                    ghostMode.frightenedModeDuration = 9;
+                    ghostSelf.startBlinkingAt = 6;
+                    ghostSelf.pinkyReleaseTimer = 4;
+                    ghostSelf.inkyReleaseTimer = 12;
+                    ghostSelf.clydeReleaseTimer = 18;
+                    ghostMove.speed = 6.9f;
+                    ghostMode.normalSpeed = 6.9f;
+                    ghostMode.frightenedSpeed = 3.9f;
+                    ghostMode.consumedSpeed = 18f;
+                }
+                
+                break;
+                
+            case 5:
+                _pacmanMove.speed = 10;
+                                
+                foreach (var ghost in _ghostObjects)
+                {
+                    var ghostMode = ghost.GetComponent<GhostMode>();
+                    var ghostSelf = ghost.GetComponent<Ghost>();
+                    var ghostMove = ghost.GetComponent<GhostMove>();
+                    ghostMode.scatterModeTimer1 = 7;
+                    ghostMode.scatterModeTimer2 = 7;
+                    ghostMode.scatterModeTimer3 = 5;
+                    ghostMode.scatterModeTimer4 = 1;
+                    ghostMode.chaseModeTimer1 = 20;
+                    ghostMode.chaseModeTimer2 = 20;
+                    ghostMode.chaseModeTimer3 = 1000;
+                    ghostMode.frightenedModeDuration = 9;
+                    ghostSelf.startBlinkingAt = 6;
+                    ghostSelf.pinkyReleaseTimer = 4;
+                    ghostSelf.inkyReleaseTimer = 12;
+                    ghostSelf.clydeReleaseTimer = 18;
+                    ghostMove.speed = 6.9f;
+                    ghostMode.normalSpeed = 6.9f;
+                    ghostMode.frightenedSpeed = 3.9f;
+                    ghostMode.consumedSpeed = 18f;
+                }
+                
+                break;
+        }
     }
 }

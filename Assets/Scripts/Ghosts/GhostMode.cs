@@ -15,15 +15,15 @@ public class GhostMode : MonoBehaviour
     public float normalSpeed = 5.9f;
     public int modeChangeIteration = 1;
     public float modeChangeTimer;
+    public int scatterModeTimer1 = 7;
+    public int chaseModeTimer1 = 20;
+    public int scatterModeTimer2 = 7;
+    public int chaseModeTimer2 = 20;
+    public int scatterModeTimer3 = 5;
+    public int chaseModeTimer3 = 20;
+    public int scatterModeTimer4 = 5;
+    public int frightenedModeDuration = 10;
     
-    private const int FrightenedModeDuration = 10;
-    private const int ScatterModeTimer1 = 7;
-    private const int ChaseModeTimer1 = 20;
-    private const int ScatterModeTimer2 = 7;
-    private const int ChaseModeTimer2 = 20;
-    private const int ScatterModeTimer3 = 5;
-    private const int ChaseModeTimer3 = 20;
-    private const int ScatterModeTimer4 = 5;
     private Mode _previousMode;
     private GhostMove _ghostMovement;
     private GameObject _game;
@@ -68,13 +68,13 @@ public class GhostMode : MonoBehaviour
             {
                 case 1:
                 {
-                    if (currentMode == Mode.Scatter && modeChangeTimer > ScatterModeTimer1)
+                    if (currentMode == Mode.Scatter && modeChangeTimer > scatterModeTimer1)
                     {
                         ChangeMode(Mode.Chase);
                         modeChangeTimer = 0;
                     }
 
-                    if (currentMode != Mode.Chase || !(modeChangeTimer > ChaseModeTimer1)) return;
+                    if (currentMode != Mode.Chase || !(modeChangeTimer > chaseModeTimer1)) return;
 
                     modeChangeIteration = 2;
                     ChangeMode(Mode.Scatter);
@@ -83,13 +83,13 @@ public class GhostMode : MonoBehaviour
                 }
                 case 2:
                 {
-                    if (currentMode == Mode.Scatter && modeChangeTimer > ScatterModeTimer2)
+                    if (currentMode == Mode.Scatter && modeChangeTimer > scatterModeTimer2)
                     {
                         ChangeMode(Mode.Chase);
                         modeChangeTimer = 0;
                     }
 
-                    if (currentMode != Mode.Chase || !(modeChangeTimer > ChaseModeTimer2)) return;
+                    if (currentMode != Mode.Chase || !(modeChangeTimer > chaseModeTimer2)) return;
                 
                     modeChangeIteration = 3;
                     ChangeMode(Mode.Scatter);
@@ -98,20 +98,20 @@ public class GhostMode : MonoBehaviour
                 }
                 case 3:
                 {
-                    if (currentMode == Mode.Scatter && modeChangeTimer > ScatterModeTimer3)
+                    if (currentMode == Mode.Scatter && modeChangeTimer > scatterModeTimer3)
                     {
                         ChangeMode(Mode.Chase);
                         modeChangeTimer = 0;
                     }
 
-                    if (currentMode != Mode.Chase || !(modeChangeTimer > ChaseModeTimer3)) return;
+                    if (currentMode != Mode.Chase || !(modeChangeTimer > chaseModeTimer3)) return;
                 
                     modeChangeIteration = 4;
                     ChangeMode(Mode.Scatter);
                     modeChangeTimer = 0;
                     break;
                 }
-                case 4 when currentMode != Mode.Scatter || !(modeChangeTimer > ScatterModeTimer4):
+                case 4 when currentMode != Mode.Scatter || !(modeChangeTimer > scatterModeTimer4):
                     return;
                 
                 case 4:
@@ -124,7 +124,7 @@ public class GhostMode : MonoBehaviour
         {
             frightenedModeTimer += Time.deltaTime;
 
-            if (frightenedModeTimer >= FrightenedModeDuration)
+            if (frightenedModeTimer >= frightenedModeDuration)
             {
                 _backgroundAudio.clip = _audio.normalBackgroundAudio;
                 _backgroundAudio.Play();
