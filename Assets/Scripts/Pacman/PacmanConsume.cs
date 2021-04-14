@@ -1,3 +1,4 @@
+using Ghosts;
 using UnityEngine;
 
 namespace Pacman

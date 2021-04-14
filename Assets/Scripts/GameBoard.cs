@@ -6,6 +6,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Debug = UnityEngine.Debug;
 
 public class GameBoard : MonoBehaviour
 {
@@ -194,6 +195,7 @@ public class GameBoard : MonoBehaviour
             readyText.text = "GAME OVER!";
             readyText.color = Color.red;
             readyText.enabled = true;
+            score = 0;
 
             StartCoroutine(ProcessGameOver(2));
         }
@@ -320,6 +322,8 @@ public class GameBoard : MonoBehaviour
 
         _shouldBlink = false;
         
+        _didIncrementLevel = false;
+        SetDifficultyForLevel(_currentLevel);
         EndOfLevelMenu();
     }
 
@@ -347,13 +351,6 @@ public class GameBoard : MonoBehaviour
         }
     }
 
-    private void StartNextLevel()
-    {
-        _didIncrementLevel = false;
-        SetDifficultyForLevel(_currentLevel);
-        SceneManager.LoadScene("Level1");
-    }
-
     private void EndOfLevelMenu()
     {
         SceneManager.LoadScene("EndOfLevel");
@@ -368,25 +365,23 @@ public class GameBoard : MonoBehaviour
                 
                 foreach (var ghost in _ghostObjects)
                 {
-                    var ghostMode = ghost.GetComponent<GhostMode>();
-                    var ghostSelf = ghost.GetComponent<Ghost>();
                     var ghostMove = ghost.GetComponent<GhostMove>();
-                    ghostMode.scatterModeTimer1 = 7;
-                    ghostMode.scatterModeTimer2 = 7;
-                    ghostMode.scatterModeTimer3 = 5;
-                    ghostMode.scatterModeTimer4 = 1;
-                    ghostMode.chaseModeTimer1 = 20;
-                    ghostMode.chaseModeTimer2 = 20;
-                    ghostMode.chaseModeTimer3 = 1000;
-                    ghostMode.frightenedModeDuration = 9;
-                    ghostSelf.startBlinkingAt = 6;
-                    ghostSelf.pinkyReleaseTimer = 4;
-                    ghostSelf.inkyReleaseTimer = 12;
-                    ghostSelf.clydeReleaseTimer = 18;
+                    GhostMode.scatterModeTimer1 = 7;
+                    GhostMode.scatterModeTimer2 = 7;
+                    GhostMode.scatterModeTimer3 = 5;
+                    GhostMode.scatterModeTimer4 = 1;
+                    GhostMode.chaseModeTimer1 = 20;
+                    GhostMode.chaseModeTimer2 = 20;
+                    GhostMode.chaseModeTimer3 = 1033;
+                    GhostMode.frightenedModeDuration = 9;
+                    Ghost.startBlinkingAt = 6;
+                    Ghost.pinkyReleaseTimer = 4;
+                    Ghost.inkyReleaseTimer = 12;
+                    Ghost.clydeReleaseTimer = 18;
                     ghostMove.speed = 6.9f;
-                    ghostMode.normalSpeed = 6.9f;
-                    ghostMode.frightenedSpeed = 3.9f;
-                    ghostMode.consumedSpeed = 18f;
+                    GhostMode.normalSpeed = 6.9f;
+                    GhostMode.frightenedSpeed = 3.9f;
+                    GhostMode.consumedSpeed = 18f;
                 }
                 
                 break;
@@ -396,25 +391,23 @@ public class GameBoard : MonoBehaviour
                                 
                 foreach (var ghost in _ghostObjects)
                 {
-                    var ghostMode = ghost.GetComponent<GhostMode>();
-                    var ghostSelf = ghost.GetComponent<Ghost>();
                     var ghostMove = ghost.GetComponent<GhostMove>();
-                    ghostMode.scatterModeTimer1 = 7;
-                    ghostMode.scatterModeTimer2 = 7;
-                    ghostMode.scatterModeTimer3 = 5;
-                    ghostMode.scatterModeTimer4 = 1;
-                    ghostMode.chaseModeTimer1 = 20;
-                    ghostMode.chaseModeTimer2 = 20;
-                    ghostMode.chaseModeTimer3 = 1000;
-                    ghostMode.frightenedModeDuration = 8;
-                    ghostSelf.startBlinkingAt = 5;
-                    ghostSelf.pinkyReleaseTimer = 3;
-                    ghostSelf.inkyReleaseTimer = 10;
-                    ghostSelf.clydeReleaseTimer = 15;
+                    GhostMode.scatterModeTimer1 = 7;
+                    GhostMode.scatterModeTimer2 = 7;
+                    GhostMode.scatterModeTimer3 = 5;
+                    GhostMode.scatterModeTimer4 = 1;
+                    GhostMode.chaseModeTimer1 = 20;
+                    GhostMode.chaseModeTimer2 = 20;
+                    GhostMode.chaseModeTimer3 = 1033;
+                    GhostMode.frightenedModeDuration = 8;
+                    Ghost.startBlinkingAt = 5;
+                    Ghost.pinkyReleaseTimer = 3;
+                    Ghost.inkyReleaseTimer = 10;
+                    Ghost.clydeReleaseTimer = 15;
                     ghostMove.speed = 7.9f;
-                    ghostMode.normalSpeed = 7.9f;
-                    ghostMode.frightenedSpeed = 4.9f;
-                    ghostMode.consumedSpeed = 20f;
+                    GhostMode.normalSpeed = 7.9f;
+                    GhostMode.frightenedSpeed = 4.9f;
+                    GhostMode.consumedSpeed = 20f;
                 }
                 
                 break;
@@ -424,25 +417,23 @@ public class GameBoard : MonoBehaviour
                                 
                 foreach (var ghost in _ghostObjects)
                 {
-                    var ghostMode = ghost.GetComponent<GhostMode>();
-                    var ghostSelf = ghost.GetComponent<Ghost>();
                     var ghostMove = ghost.GetComponent<GhostMove>();
-                    ghostMode.scatterModeTimer1 = 7;
-                    ghostMode.scatterModeTimer2 = 7;
-                    ghostMode.scatterModeTimer3 = 5;
-                    ghostMode.scatterModeTimer4 = 1;
-                    ghostMode.chaseModeTimer1 = 20;
-                    ghostMode.chaseModeTimer2 = 20;
-                    ghostMode.chaseModeTimer3 = 1000;
-                    ghostMode.frightenedModeDuration = 9;
-                    ghostSelf.startBlinkingAt = 6;
-                    ghostSelf.pinkyReleaseTimer = 4;
-                    ghostSelf.inkyReleaseTimer = 12;
-                    ghostSelf.clydeReleaseTimer = 18;
-                    ghostMove.speed = 6.9f;
-                    ghostMode.normalSpeed = 6.9f;
-                    ghostMode.frightenedSpeed = 3.9f;
-                    ghostMode.consumedSpeed = 18f;
+                    GhostMode.scatterModeTimer1 = 7;
+                    GhostMode.scatterModeTimer2 = 7;
+                    GhostMode.scatterModeTimer3 = 5;
+                    GhostMode.scatterModeTimer4 = 1;
+                    GhostMode.chaseModeTimer1 = 20;
+                    GhostMode.chaseModeTimer2 = 20;
+                    GhostMode.chaseModeTimer3 = 1033;
+                    GhostMode.frightenedModeDuration = 9;
+                    Ghost.startBlinkingAt = 4;
+                    Ghost.pinkyReleaseTimer = 2;
+                    Ghost.inkyReleaseTimer = 8;
+                    Ghost.clydeReleaseTimer = 13;
+                    ghostMove.speed = 8.9f;
+                    GhostMode.normalSpeed = 8.9f;
+                    GhostMode.frightenedSpeed = 5.9f;
+                    GhostMode.consumedSpeed = 22f;
                 }
                 
                 break;
@@ -452,25 +443,23 @@ public class GameBoard : MonoBehaviour
                                 
                 foreach (var ghost in _ghostObjects)
                 {
-                    var ghostMode = ghost.GetComponent<GhostMode>();
-                    var ghostSelf = ghost.GetComponent<Ghost>();
                     var ghostMove = ghost.GetComponent<GhostMove>();
-                    ghostMode.scatterModeTimer1 = 7;
-                    ghostMode.scatterModeTimer2 = 7;
-                    ghostMode.scatterModeTimer3 = 5;
-                    ghostMode.scatterModeTimer4 = 1;
-                    ghostMode.chaseModeTimer1 = 20;
-                    ghostMode.chaseModeTimer2 = 20;
-                    ghostMode.chaseModeTimer3 = 1000;
-                    ghostMode.frightenedModeDuration = 9;
-                    ghostSelf.startBlinkingAt = 6;
-                    ghostSelf.pinkyReleaseTimer = 4;
-                    ghostSelf.inkyReleaseTimer = 12;
-                    ghostSelf.clydeReleaseTimer = 18;
-                    ghostMove.speed = 6.9f;
-                    ghostMode.normalSpeed = 6.9f;
-                    ghostMode.frightenedSpeed = 3.9f;
-                    ghostMode.consumedSpeed = 18f;
+                    GhostMode.scatterModeTimer1 = 5;
+                    GhostMode.scatterModeTimer2 = 5;
+                    GhostMode.scatterModeTimer3 = 5;
+                    GhostMode.scatterModeTimer4 = 1;
+                    GhostMode.chaseModeTimer1 = 20;
+                    GhostMode.chaseModeTimer2 = 20;
+                    GhostMode.chaseModeTimer3 = 1037;
+                    GhostMode.frightenedModeDuration = 6;
+                    Ghost.startBlinkingAt = 3;
+                    Ghost.pinkyReleaseTimer = 2;
+                    Ghost.inkyReleaseTimer = 6;
+                    Ghost.clydeReleaseTimer = 10;
+                    ghostMove.speed = 9.9f;
+                    GhostMode.normalSpeed = 9.9f;
+                    GhostMode.frightenedSpeed = 6.9f;
+                    GhostMode.consumedSpeed = 24f;
                 }
                 
                 break;

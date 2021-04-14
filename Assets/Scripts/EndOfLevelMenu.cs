@@ -29,7 +29,6 @@ public class EndOfLevelMenu: MonoBehaviour
                 {
                         if (selectorPosition.y.Equals(continueText.transform.localPosition.y))
                         {
-                                //next level
                                 SceneManager.LoadScene("Level1");
                         }
                 }

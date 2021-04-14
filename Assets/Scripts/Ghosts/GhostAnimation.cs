@@ -41,7 +41,7 @@ namespace Ghosts
             {
                 animator.runtimeAnimatorController = _ghost.ghostFrightened;
             
-                if (_ghostMode.frightenedModeTimer >= _ghost.startBlinkingAt)
+                if (_ghostMode.frightenedModeTimer >= Ghost.startBlinkingAt)
                 {
                     _ghost.blinkTimer += Time.deltaTime;
 

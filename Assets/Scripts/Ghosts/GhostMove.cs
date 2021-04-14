@@ -265,17 +265,17 @@ namespace Ghosts
         {
             _ghost.ghostReleaseTimer += Time.deltaTime;
 
-            if (_ghost.ghostReleaseTimer > _ghost.pinkyReleaseTimer)
+            if (_ghost.ghostReleaseTimer > Ghost.pinkyReleaseTimer)
             {
                 ReleasePinky();
             }
         
-            if (_ghost.ghostReleaseTimer > _ghost.inkyReleaseTimer)
+            if (_ghost.ghostReleaseTimer > Ghost.inkyReleaseTimer)
             {
                 ReleaseInky();
             }
         
-            if (_ghost.ghostReleaseTimer > _ghost.clydeReleaseTimer)
+            if (_ghost.ghostReleaseTimer > Ghost.clydeReleaseTimer)
             {
                 ReleaseClyde();
             }

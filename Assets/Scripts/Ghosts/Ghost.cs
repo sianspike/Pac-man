@@ -21,10 +21,10 @@ namespace Ghosts
         [SerializeField] public Node ghostHouse;
 
         public float ghostReleaseTimer;
-        public int pinkyReleaseTimer = 5;
-        public int inkyReleaseTimer = 14;
-        public int clydeReleaseTimer = 21;
-        public int startBlinkingAt = 7;
+        public static int pinkyReleaseTimer = 5;
+        public static int inkyReleaseTimer = 14;
+        public static int clydeReleaseTimer = 21;
+        public static int startBlinkingAt = 7;
         public float blinkTimer;
         public bool ghostIsWhite;
         public bool canMove = true;
@@ -72,7 +72,7 @@ namespace Ghosts
                     {
                         if (tileComponent.isGhostHouse)
                         {
-                            _ghostMovement.speed = _mode.normalSpeed;
+                            _ghostMovement.speed = GhostMode.normalSpeed;
 
                             var node = _ghostMovement.GetNodeAtPosition(transform.position);
 
@@ -95,7 +95,7 @@ namespace Ghosts
         {
             canMove = true;
             _mode.currentMode = Mode.Scatter;
-            _ghostMovement.speed = _mode.normalSpeed;
+            _ghostMovement.speed = GhostMode.normalSpeed;
             _mode.previousSpeed = 0;
             ghostReleaseTimer = 0;
             _mode.modeChangeIteration = 1;
