@@ -82,7 +82,7 @@ namespace Pacman
                 }
                 else
                 {
-                    transform.localPosition += (Vector3) (direction * speed) * Time.deltaTime;
+                    transform.localPosition += (Vector3) (direction * Pacman.pacmanSpeed) * Time.deltaTime;
                 }
             }
         }

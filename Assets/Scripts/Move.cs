@@ -2,8 +2,6 @@ using UnityEngine;
 
 public class Move : MonoBehaviour
 {
-    [SerializeField] public float speed;
-
     public Node currentNode, targetNode, previousNode;
     public Vector2 nextDirection;
     public Node startingPosition;

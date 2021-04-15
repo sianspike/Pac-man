@@ -4,6 +4,8 @@ namespace Pacman
 {
     public class Pacman : MonoBehaviour
     {
+        public static float pacmanSpeed;
+        
         private PacmanOrientation _pacmanOrientation;
         private PacmanAnimation _animation;
         private PacmanConsume _pacmanConsume;

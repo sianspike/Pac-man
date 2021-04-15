@@ -35,8 +35,8 @@ namespace Ghosts
         {
             GameBoard.score += 200;
             _mode.currentMode = Mode.Consumed;
-            _mode.previousSpeed = _ghostMovement.speed;
-            _ghostMovement.speed = GhostMode.consumedSpeed;
+            _mode.previousSpeed = _ghost.speed;
+            _ghost.speed = GhostMode.consumedSpeed;
             
             StartConsumed(_ghost);
         }

@@ -24,14 +24,14 @@ namespace Ghosts
         public static int frightenedModeDuration = 10;
     
         private Mode _previousMode;
-        private GhostMove _ghostMovement;
+        private Ghost _ghost;
         private GameObject _game;
         private AudioSource _backgroundAudio;
         private Audio _audio;
 
         private void Start()
         {
-            _ghostMovement = GetComponent<GhostMove>();
+            _ghost = GetComponent<Ghost>();
             _game = GameObject.Find("game");
             _backgroundAudio = _game.transform.GetComponent<AudioSource>();
             _audio = _game.transform.GetComponent<Audio>();
@@ -41,13 +41,13 @@ namespace Ghosts
         {
             if (currentMode == Mode.Frightened)
             {
-                _ghostMovement.speed = previousSpeed;
+                _ghost.speed = previousSpeed;
             }
 
             if (mode == Mode.Frightened)
             {
-                previousSpeed = _ghostMovement.speed;
-                _ghostMovement.speed = frightenedSpeed;
+                previousSpeed = _ghost.speed;
+                _ghost.speed = frightenedSpeed;
             }
 
             if (currentMode != mode)

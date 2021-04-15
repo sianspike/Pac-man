@@ -100,6 +100,8 @@ public class GameBoard : MonoBehaviour
         if (_currentLevel == 1)
         {
             _audioSource.Play();
+            Pacman.Pacman.pacmanSpeed = 6;
+            Ghost.ghostSpeed = 5.9f;
         }
         
         StartGame();
@@ -361,108 +363,88 @@ public class GameBoard : MonoBehaviour
         switch (level)
         {
             case 2:
-                _pacmanMove.speed = 7;
-                
-                foreach (var ghost in _ghostObjects)
-                {
-                    var ghostMove = ghost.GetComponent<GhostMove>();
-                    GhostMode.scatterModeTimer1 = 7;
-                    GhostMode.scatterModeTimer2 = 7;
-                    GhostMode.scatterModeTimer3 = 5;
-                    GhostMode.scatterModeTimer4 = 1;
-                    GhostMode.chaseModeTimer1 = 20;
-                    GhostMode.chaseModeTimer2 = 20;
-                    GhostMode.chaseModeTimer3 = 1033;
-                    GhostMode.frightenedModeDuration = 9;
-                    Ghost.startBlinkingAt = 6;
-                    Ghost.pinkyReleaseTimer = 4;
-                    Ghost.inkyReleaseTimer = 12;
-                    Ghost.clydeReleaseTimer = 18;
-                    ghostMove.speed = 6.9f;
-                    GhostMode.normalSpeed = 6.9f;
-                    GhostMode.frightenedSpeed = 3.9f;
-                    GhostMode.consumedSpeed = 18f;
-                }
-                
+                Pacman.Pacman.pacmanSpeed = 7;
+                GhostMode.scatterModeTimer1 = 7;
+                GhostMode.scatterModeTimer2 = 7;
+                GhostMode.scatterModeTimer3 = 5;
+                GhostMode.scatterModeTimer4 = 1;
+                GhostMode.chaseModeTimer1 = 20;
+                GhostMode.chaseModeTimer2 = 20;
+                GhostMode.chaseModeTimer3 = 1033;
+                GhostMode.frightenedModeDuration = 9;
+                Ghost.startBlinkingAt = 6;
+                Ghost.pinkyReleaseTimer = 4;
+                Ghost.inkyReleaseTimer = 12;
+                Ghost.clydeReleaseTimer = 18;
+                Ghost.ghostSpeed = 6.9f;
+                GhostMode.normalSpeed = 6.9f;
+                GhostMode.frightenedSpeed = 3.9f;
+                GhostMode.consumedSpeed = 18f;
+
                 break;
-                
+
             case 3:
-                _pacmanMove.speed = 8;
-                                
-                foreach (var ghost in _ghostObjects)
-                {
-                    var ghostMove = ghost.GetComponent<GhostMove>();
-                    GhostMode.scatterModeTimer1 = 7;
-                    GhostMode.scatterModeTimer2 = 7;
-                    GhostMode.scatterModeTimer3 = 5;
-                    GhostMode.scatterModeTimer4 = 1;
-                    GhostMode.chaseModeTimer1 = 20;
-                    GhostMode.chaseModeTimer2 = 20;
-                    GhostMode.chaseModeTimer3 = 1033;
-                    GhostMode.frightenedModeDuration = 8;
-                    Ghost.startBlinkingAt = 5;
-                    Ghost.pinkyReleaseTimer = 3;
-                    Ghost.inkyReleaseTimer = 10;
-                    Ghost.clydeReleaseTimer = 15;
-                    ghostMove.speed = 7.9f;
-                    GhostMode.normalSpeed = 7.9f;
-                    GhostMode.frightenedSpeed = 4.9f;
-                    GhostMode.consumedSpeed = 20f;
-                }
-                
+                Pacman.Pacman.pacmanSpeed = 8;
+                GhostMode.scatterModeTimer1 = 7;
+                GhostMode.scatterModeTimer2 = 7;
+                GhostMode.scatterModeTimer3 = 5;
+                GhostMode.scatterModeTimer4 = 1;
+                GhostMode.chaseModeTimer1 = 20;
+                GhostMode.chaseModeTimer2 = 20;
+                GhostMode.chaseModeTimer3 = 1033;
+                GhostMode.frightenedModeDuration = 8;
+                Ghost.startBlinkingAt = 5;
+                Ghost.pinkyReleaseTimer = 3;
+                Ghost.inkyReleaseTimer = 10;
+                Ghost.clydeReleaseTimer = 15;
+                Ghost.ghostSpeed = 7.9f;
+                GhostMode.normalSpeed = 7.9f;
+                GhostMode.frightenedSpeed = 4.9f;
+                GhostMode.consumedSpeed = 20f;
+
                 break;
-                
+
             case 4:
-                _pacmanMove.speed = 9;
-                                
-                foreach (var ghost in _ghostObjects)
-                {
-                    var ghostMove = ghost.GetComponent<GhostMove>();
-                    GhostMode.scatterModeTimer1 = 7;
-                    GhostMode.scatterModeTimer2 = 7;
-                    GhostMode.scatterModeTimer3 = 5;
-                    GhostMode.scatterModeTimer4 = 1;
-                    GhostMode.chaseModeTimer1 = 20;
-                    GhostMode.chaseModeTimer2 = 20;
-                    GhostMode.chaseModeTimer3 = 1033;
-                    GhostMode.frightenedModeDuration = 9;
-                    Ghost.startBlinkingAt = 4;
-                    Ghost.pinkyReleaseTimer = 2;
-                    Ghost.inkyReleaseTimer = 8;
-                    Ghost.clydeReleaseTimer = 13;
-                    ghostMove.speed = 8.9f;
-                    GhostMode.normalSpeed = 8.9f;
-                    GhostMode.frightenedSpeed = 5.9f;
-                    GhostMode.consumedSpeed = 22f;
-                }
-                
+                Pacman.Pacman.pacmanSpeed = 9;
+                GhostMode.scatterModeTimer1 = 7;
+                GhostMode.scatterModeTimer2 = 7;
+                GhostMode.scatterModeTimer3 = 5;
+                GhostMode.scatterModeTimer4 = 1;
+                GhostMode.chaseModeTimer1 = 20;
+                GhostMode.chaseModeTimer2 = 20;
+                GhostMode.chaseModeTimer3 = 1033;
+                GhostMode.frightenedModeDuration = 9;
+                Ghost.startBlinkingAt = 4;
+                Ghost.pinkyReleaseTimer = 2;
+                Ghost.inkyReleaseTimer = 8;
+                Ghost.clydeReleaseTimer = 13;
+                Ghost.ghostSpeed = 8.9f;
+                GhostMode.normalSpeed = 8.9f;
+                GhostMode.frightenedSpeed = 5.9f;
+                GhostMode.consumedSpeed = 22f;
+
                 break;
-                
-            case 5:
-                _pacmanMove.speed = 10;
-                                
-                foreach (var ghost in _ghostObjects)
-                {
-                    var ghostMove = ghost.GetComponent<GhostMove>();
-                    GhostMode.scatterModeTimer1 = 5;
-                    GhostMode.scatterModeTimer2 = 5;
-                    GhostMode.scatterModeTimer3 = 5;
-                    GhostMode.scatterModeTimer4 = 1;
-                    GhostMode.chaseModeTimer1 = 20;
-                    GhostMode.chaseModeTimer2 = 20;
-                    GhostMode.chaseModeTimer3 = 1037;
-                    GhostMode.frightenedModeDuration = 6;
-                    Ghost.startBlinkingAt = 3;
-                    Ghost.pinkyReleaseTimer = 2;
-                    Ghost.inkyReleaseTimer = 6;
-                    Ghost.clydeReleaseTimer = 10;
-                    ghostMove.speed = 9.9f;
-                    GhostMode.normalSpeed = 9.9f;
-                    GhostMode.frightenedSpeed = 6.9f;
-                    GhostMode.consumedSpeed = 24f;
-                }
-                
-                break;
+        }
+
+        if (_currentLevel > 4) {
+            
+                Pacman.Pacman.pacmanSpeed = 10;
+                GhostMode.scatterModeTimer1 = 5;
+                GhostMode.scatterModeTimer2 = 5;
+                GhostMode.scatterModeTimer3 = 5;
+                GhostMode.scatterModeTimer4 = 1;
+                GhostMode.chaseModeTimer1 = 20;
+                GhostMode.chaseModeTimer2 = 20;
+                GhostMode.chaseModeTimer3 = 1037;
+                GhostMode.frightenedModeDuration = 6;
+                Ghost.startBlinkingAt = 3;
+                Ghost.pinkyReleaseTimer = 2;
+                Ghost.inkyReleaseTimer = 6;
+                Ghost.clydeReleaseTimer = 10;
+                Ghost.ghostSpeed = 9.9f;
+                GhostMode.normalSpeed = 9.9f;
+                GhostMode.frightenedSpeed = 6.9f;
+                GhostMode.consumedSpeed = 24f;
         }
     }
 }

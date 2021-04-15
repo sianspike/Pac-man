@@ -47,7 +47,7 @@ namespace Ghosts
                 }
                 else
                 {
-                    transform.localPosition += (Vector3) direction * (speed * Time.deltaTime); 
+                    transform.localPosition += (Vector3) direction * (_ghost.speed * Time.deltaTime); 
                 }
             }
 

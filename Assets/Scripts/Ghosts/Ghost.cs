@@ -28,6 +28,8 @@ namespace Ghosts
         public float blinkTimer;
         public bool ghostIsWhite;
         public bool canMove = true;
+        public static float ghostSpeed;
+        public float speed;
     
         private GhostMove _ghostMovement;
         private GhostMode _mode;
@@ -37,6 +39,7 @@ namespace Ghosts
 
         private void Start()
         {
+            speed = ghostSpeed;
             _ghostMovement = GetComponent<GhostMove>();
             _mode = GetComponent<GhostMode>();
             _collision = GetComponent<Collision>();
@@ -72,7 +75,7 @@ namespace Ghosts
                     {
                         if (tileComponent.isGhostHouse)
                         {
-                            _ghostMovement.speed = GhostMode.normalSpeed;
+                            speed = GhostMode.normalSpeed;
 
                             var node = _ghostMovement.GetNodeAtPosition(transform.position);
 
@@ -94,8 +97,8 @@ namespace Ghosts
         public void Restart()
         {
             canMove = true;
-            _mode.currentMode = Mode.Scatter;
-            _ghostMovement.speed = GhostMode.normalSpeed;
+            _mode.currentMode = Mode.Scatter; 
+            speed = GhostMode.normalSpeed;
             _mode.previousSpeed = 0;
             ghostReleaseTimer = 0;
             _mode.modeChangeIteration = 1;
