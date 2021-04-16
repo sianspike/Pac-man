@@ -1,3 +1,7 @@
+using System;
+using System.Collections;
+using System.Linq;
+using Replay;
 using UnityEngine;
 
 namespace Pacman
@@ -6,7 +10,9 @@ namespace Pacman
     {
         private PacmanAnimation _animation;
         private PacmanOrientation _orientation;
-        
+        private float _keyPressTimer = 0f;
+        private KeyCode _simulatedInput;
+
         private new void Start()
         { 
             base.Start();
@@ -16,24 +22,66 @@ namespace Pacman
             direction = Vector2.right;
             targetNode = PacmanCanMove(direction);
         }
-        
+
+        private void Update()
+        {
+            UpdateTimer();
+        }
+
+        private void UpdateTimer()
+        {
+            _keyPressTimer += Time.deltaTime;
+        }
+
         public void CheckInput()
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
+            if (Input.GetKeyDown(KeyCode.LeftArrow) || _simulatedInput == KeyCode.LeftArrow)
             {
                 ChangePacmanPosition(Vector2.left);
+                _simulatedInput = KeyCode.None;
+
+                if (!GameBoard.watchReplaySelected)
+                {
+                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.inputs.Add(KeyCode.LeftArrow);
+                    _keyPressTimer = 0f;
+                }
             } 
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
+            else if (Input.GetKeyDown(KeyCode.RightArrow) || _simulatedInput == KeyCode.RightArrow)
             {
                 ChangePacmanPosition(Vector2.right);
+                _simulatedInput = KeyCode.None;
+
+                if (!GameBoard.watchReplaySelected)
+                {
+                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.inputs.Add(KeyCode.RightArrow);
+                    _keyPressTimer = 0f;
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.UpArrow))
+            else if (Input.GetKeyDown(KeyCode.UpArrow) || _simulatedInput == KeyCode.UpArrow)
             {
                 ChangePacmanPosition(Vector2.up);
+                _simulatedInput = KeyCode.None;
+
+                if (!GameBoard.watchReplaySelected)
+                {
+                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.inputs.Add(KeyCode.UpArrow);
+                    _keyPressTimer = 0f;
+                }
             }
-            else if (Input.GetKeyDown(KeyCode.DownArrow))
+            else if (Input.GetKeyDown(KeyCode.DownArrow) || _simulatedInput == KeyCode.DownArrow)
             {
                 ChangePacmanPosition(Vector2.down);
+                _simulatedInput = KeyCode.None;
+
+                if (!GameBoard.watchReplaySelected)
+                {
+                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.inputs.Add(KeyCode.DownArrow);
+                    _keyPressTimer = 0f;
+                }
             }
         }
         
@@ -139,6 +187,16 @@ namespace Pacman
             
             _orientation.UpdateOrientation(direction);
             ChangePacmanPosition(direction);
+        }
+        
+        public IEnumerator WaitUntilNextKeyPress()
+        {
+            for (var i = 0; i < ReplayManager.inputs.Count; i++)
+            {
+                yield return new WaitForSeconds(ReplayManager.timeBetweenInputs[i]);
+
+                _simulatedInput = ReplayManager.inputs[i];
+            }
         }
     }
 }

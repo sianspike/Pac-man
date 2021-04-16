@@ -2,6 +2,7 @@ using System.Collections;
 using System.Diagnostics;
 using Ghosts;
 using Pacman;
+using Replay;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,6 +41,8 @@ public class GameBoard : MonoBehaviour
     private float _blinkIntervalTimer = 0;
     private SpriteRenderer _mazeSpriteRenderer;
     private bool _didIncrementLevel = false;
+    private static ReplayManager _replayManager;
+    public static bool watchReplaySelected = false;
 
     private const float DeathAudioLength = 1.9f;
 
@@ -73,6 +76,7 @@ public class GameBoard : MonoBehaviour
         _pacmanMove = _pacman.transform.GetComponent<PacmanMove>();
         _pacmanConsume = _pacman.GetComponent<PacmanConsume>();
         _mazeSpriteRenderer = GameObject.Find("maze").GetComponent<SpriteRenderer>();
+        _replayManager = GetComponent<ReplayManager>();
 
         var gameObjects = FindObjectsOfType(typeof(GameObject));
 
@@ -105,6 +109,7 @@ public class GameBoard : MonoBehaviour
         }
         
         StartGame();
+        
     }
 
     private void Update()
@@ -213,6 +218,15 @@ public class GameBoard : MonoBehaviour
 
     private void StartGame()
     {
+        if (watchReplaySelected)
+        {
+            StartCoroutine(_pacmanMove.WaitUntilNextKeyPress());
+        }
+        else
+        {
+            _replayManager.StartRecording();
+        }
+
         foreach (var ghost in _ghostObjects)
         {
             ghost.transform.GetComponent<Ghost>().canMove = false;
@@ -282,6 +296,8 @@ public class GameBoard : MonoBehaviour
 
     public void PlayerWon()
     {
+        _replayManager.StopRecording();
+        
         if (!_didIncrementLevel)
         {
             _didIncrementLevel = true;

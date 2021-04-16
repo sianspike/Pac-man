@@ -5468,6 +5468,7 @@ GameObject:
   - component: {fileID: 439490728}
   - component: {fileID: 439490730}
   - component: {fileID: 439490731}
+  - component: {fileID: 439490732}
   m_Layer: 0
   m_Name: game
   m_TagString: Untagged
@@ -5627,6 +5628,18 @@ MonoBehaviour:
   pacmanDeathBackgroundAudio: {fileID: 8300000, guid: bcc1aa2c630884ab78f2b37f3332abaf,
     type: 3}
   consumedGhostAudio: {fileID: 8300000, guid: d0a50972631224d9f8cc40935bd74d0f, type: 3}
+--- !u!114 &439490732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439490727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e40b352086745fab2a5f8c1d23d801e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &448528451
 GameObject:
   m_ObjectHideFlags: 0
