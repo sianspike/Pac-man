@@ -33,7 +33,7 @@ namespace Ghosts
     
         public void Consumed()
         {
-            GameBoard.score += 200;
+            ScoreManager.profile1Score += 200;
             _mode.currentMode = Mode.Consumed;
             _mode.previousSpeed = _ghost.speed;
             _ghost.speed = GhostMode.consumedSpeed;

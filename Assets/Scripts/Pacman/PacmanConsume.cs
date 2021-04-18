@@ -1,5 +1,6 @@
 using Ghosts;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 namespace Pacman
 {
@@ -33,7 +34,7 @@ namespace Pacman
             {
                 tileObject.GetComponent<SpriteRenderer>().enabled = false;
                 tile.consumed = true;
-                GameBoard.score += 10;
+                ScoreManager.profile1Score += 10;
                 _pelletsConsumed++;
                 
                 _audio.PlayChompSound();

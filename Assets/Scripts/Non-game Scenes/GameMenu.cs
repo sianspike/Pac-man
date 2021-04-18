@@ -47,6 +47,10 @@ public class GameMenu: MonoBehaviour
                         } else if (playerSelectorPosition.y.Equals(tutorialText.transform.localPosition.y))
                         {
                                 SceneManager.LoadScene("Tutorial");
+                                
+                        } else if (playerSelectorPosition.y.Equals(highScoreText.transform.localPosition.y))
+                        {
+                                SceneManager.LoadScene("HighScores");
                         }
                 }
         }

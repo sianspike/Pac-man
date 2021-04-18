@@ -5469,6 +5469,7 @@ GameObject:
   - component: {fileID: 439490730}
   - component: {fileID: 439490731}
   - component: {fileID: 439490732}
+  - component: {fileID: 439490733}
   m_Layer: 0
   m_Name: game
   m_TagString: Untagged
@@ -5491,8 +5492,6 @@ MonoBehaviour:
   lives: 3
   playerText: {fileID: 448528453}
   readyText: {fileID: 1843066457}
-  scoreTitleText: {fileID: 2065739485}
-  scoreText: {fileID: 525800230}
   consumedGhostScoreText: {fileID: 1146901052}
   twoLivesImage: {fileID: 639772454}
   threeLivesImage: {fileID: 774111354}
@@ -5640,6 +5639,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e40b352086745fab2a5f8c1d23d801e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &439490733
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 439490727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c5a525c29eb45e2a94f40bf79434dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scoreText: {fileID: 525800230}
 --- !u!1 &448528451
 GameObject:
   m_ObjectHideFlags: 0

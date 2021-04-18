@@ -7,6 +7,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using Debug = UnityEngine.Debug;
 
 public class GameBoard : MonoBehaviour
@@ -16,8 +17,6 @@ public class GameBoard : MonoBehaviour
     [SerializeField] public int lives = 3;
     [SerializeField] public Text playerText;
     [SerializeField] public Text readyText;
-    [SerializeField] public Text scoreTitleText;
-    [SerializeField] public Text scoreText;
     [SerializeField] public Text consumedGhostScoreText;
     [SerializeField] public Image twoLivesImage;
     [SerializeField] public Image threeLivesImage;
@@ -42,13 +41,13 @@ public class GameBoard : MonoBehaviour
     private SpriteRenderer _mazeSpriteRenderer;
     private bool _didIncrementLevel = false;
     private static ReplayManager _replayManager;
-    public static bool watchReplaySelected = false;
+    private ScoreManager _scoreManager;
 
     private const float DeathAudioLength = 1.9f;
 
     public readonly GameObject[,] board = new GameObject[BoardWidth, BoardHeight];
-    public static int score = 0;
     public int totalPellets = 0;
+    public static bool watchReplaySelected = false;
 
     private void Awake()
     {
@@ -77,6 +76,7 @@ public class GameBoard : MonoBehaviour
         _pacmanConsume = _pacman.GetComponent<PacmanConsume>();
         _mazeSpriteRenderer = GameObject.Find("maze").GetComponent<SpriteRenderer>();
         _replayManager = GetComponent<ReplayManager>();
+        _scoreManager = GetComponent<ScoreManager>();
 
         var gameObjects = FindObjectsOfType(typeof(GameObject));
 
@@ -121,8 +121,6 @@ public class GameBoard : MonoBehaviour
 
     private void UpdateUI()
     {
-        scoreText.text = score.ToString();
-
         if (lives == 3)
         {
             threeLivesImage.enabled = true;
@@ -202,7 +200,7 @@ public class GameBoard : MonoBehaviour
             readyText.text = "GAME OVER!";
             readyText.color = Color.red;
             readyText.enabled = true;
-            score = 0;
+            ScoreManager.profile1Score = 0;
 
             StartCoroutine(ProcessGameOver(2));
         }
