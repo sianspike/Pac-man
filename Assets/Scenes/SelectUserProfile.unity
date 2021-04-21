@@ -193,7 +193,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level:'
+  m_Text: 'Level: 1'
 --- !u!222 &189958839
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 381076101}
   - component: {fileID: 381076100}
   m_Layer: 5
-  m_Name: Text
+  m_Name: main_menu_text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -345,7 +345,7 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
-    m_Alignment: 0
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
@@ -475,6 +475,7 @@ MonoBehaviour:
   profile2LevelText: {fileID: 189958838}
   profile3LevelText: {fileID: 1561584435}
   selector: {fileID: 315770683}
+  mainMenuText: {fileID: 381076100}
 --- !u!4 &964022615
 Transform:
   m_ObjectHideFlags: 0
@@ -798,7 +799,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level:'
+  m_Text: 'Level: 1'
 --- !u!222 &1561584436
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1068,7 +1069,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Level:'
+  m_Text: 'Level: 1'
 --- !u!222 &1732135851
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class ProfileSelectMenu: MonoBehaviour
@@ -11,7 +12,40 @@ public class ProfileSelectMenu: MonoBehaviour
         [SerializeField] public Text profile2LevelText;
         [SerializeField] public Text profile3LevelText;
         [SerializeField] public Text selector;
+        [SerializeField] public Text mainMenuText;
 
+        public static int profileChosen;
+
+        private void Start()
+        {
+            if (PlayerPrefs.HasKey("profile1Name"))
+            {
+                profile1Text.text = PlayerPrefs.GetString("profile1Name");
+
+                if (PlayerPrefs.HasKey("profile1Level"))
+                {
+                    profile1LevelText.text = PlayerPrefs.GetInt("profile1Level").ToString();
+                }
+                
+            } else if (PlayerPrefs.HasKey("profile2Name"))
+            {
+                profile2Text.text = PlayerPrefs.GetString("profile2Name");
+
+                if (PlayerPrefs.HasKey("profile2Level"))
+                {
+                    profile2LevelText.text = PlayerPrefs.GetInt("profile2Level").ToString();
+                }
+
+            } else if (PlayerPrefs.HasKey("profile3Name"))
+            {
+                profile3Text.text = PlayerPrefs.GetString("profile3Name");
+
+                if (PlayerPrefs.HasKey("profile3Level"))
+                {
+                    profile3LevelText.text = PlayerPrefs.GetInt("profile3Level").ToString();
+                }
+            }
+        }
         private void Update()
         {
               SelectProfile();  
@@ -23,7 +57,7 @@ public class ProfileSelectMenu: MonoBehaviour
 
             if (Input.GetKeyUp(KeyCode.DownArrow))
             {
-                if (selectorPosition.y.Equals(profile3Text.transform.localPosition.y))
+                if (selectorPosition.y.Equals((int) mainMenuText.transform.localPosition.y))
                 {
                     selector.transform.localPosition = new Vector3(selectorPosition.x,
                         profile1Text.transform.localPosition.y, selectorPosition.z);
@@ -35,10 +69,10 @@ public class ProfileSelectMenu: MonoBehaviour
                 }
             } else if (Input.GetKeyUp(KeyCode.UpArrow))
             {
-                if (selectorPosition.y.Equals(profile1Text.transform.localPosition.y))
+                if (selectorPosition.y.Equals((int) profile1Text.transform.localPosition.y))
                 {
                     selector.transform.localPosition = new Vector3(selectorPosition.x,
-                        profile3Text.transform.localPosition.y, selectorPosition.z);
+                        mainMenuText.transform.localPosition.y, selectorPosition.z);
                 }
                 else
                 {
@@ -47,15 +81,46 @@ public class ProfileSelectMenu: MonoBehaviour
                 }
             } else if (Input.GetKeyUp(KeyCode.Return))
             {
-                if (selectorPosition.y.Equals(profile1Text.transform.localPosition.y))
+                if (selectorPosition.y.Equals((int) profile1Text.transform.localPosition.y))
                 {
+                    profileChosen = 1;
                     
-                } else if (selectorPosition.y.Equals(profile2Text.transform.localPosition.y))
+                    if (PlayerPrefs.HasKey("profile1Name"))
+                    {
+                        SceneManager.LoadScene("Level1");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("NewProfile");
+                    }
+                    
+                } else if (selectorPosition.y.Equals((int) profile2Text.transform.localPosition.y))
                 {
+                    profileChosen = 2;
                     
-                } else if (selectorPosition.y.Equals(profile3Text.transform.localPosition.y))
+                    if (PlayerPrefs.HasKey("profile2Name"))
+                    {
+                        SceneManager.LoadScene("Level1");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("NewProfile");
+                    }
+                } else if (selectorPosition.y.Equals((int) profile3Text.transform.localPosition.y))
                 {
+                    profileChosen = 3;
                     
+                    if (PlayerPrefs.HasKey("profile3Name"))
+                    {
+                        SceneManager.LoadScene("Level1");
+                    }
+                    else
+                    {
+                        SceneManager.LoadScene("NewProfile");
+                    }
+                } else if (selectorPosition.y.Equals((int) mainMenuText.transform.localPosition.y))
+                {
+                    SceneManager.LoadScene("GameMenu");
                 }
             }
         }

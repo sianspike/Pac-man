@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Diagnostics;
 using Ghosts;
@@ -41,7 +42,8 @@ public class GameBoard : MonoBehaviour
     private SpriteRenderer _mazeSpriteRenderer;
     private bool _didIncrementLevel = false;
     private static ReplayManager _replayManager;
-    private ScoreManager _scoreManager;
+    private string _playerName;
+    private int _profileSlot;
 
     private const float DeathAudioLength = 1.9f;
 
@@ -76,7 +78,7 @@ public class GameBoard : MonoBehaviour
         _pacmanConsume = _pacman.GetComponent<PacmanConsume>();
         _mazeSpriteRenderer = GameObject.Find("maze").GetComponent<SpriteRenderer>();
         _replayManager = GetComponent<ReplayManager>();
-        _scoreManager = GetComponent<ScoreManager>();
+        _profileSlot = ProfileSelectMenu.profileChosen;
 
         var gameObjects = FindObjectsOfType(typeof(GameObject));
 
@@ -100,6 +102,8 @@ public class GameBoard : MonoBehaviour
                 board[(int) position.x, (int) position.y] = go;
             }
         }
+        
+        
 
         if (_currentLevel == 1)
         {
