@@ -12,6 +12,11 @@ public class GameMenu: MonoBehaviour
 
         private void Update()
         {
+                SelectOption();
+        }
+
+        private void SelectOption()
+        { 
                 var playerSelectorPosition = playerSelector.transform.localPosition;
                 
                 if (Input.GetKeyUp(KeyCode.UpArrow))
@@ -36,7 +41,7 @@ public class GameMenu: MonoBehaviour
                         else
                         {
                                 playerSelector.transform.localPosition = new Vector3(playerSelectorPosition.x,
-                                        playerSelectorPosition.y - 55, playerSelector.transform.localPosition.z);
+                                        playerSelectorPosition.y - 55, playerSelectorPosition.z);
                         }
                 } else if (Input.GetKeyUp(KeyCode.Return))
                 {
