@@ -47,7 +47,7 @@ public class GameMenu: MonoBehaviour
                 {
                         if (playerSelectorPosition.y.Equals(playText.transform.localPosition.y))
                         {
-                                SceneManager.LoadScene("Level1");
+                                SceneManager.LoadScene("SelectUserProfile");
                                 
                         } else if (playerSelectorPosition.y.Equals(tutorialText.transform.localPosition.y))
                         {

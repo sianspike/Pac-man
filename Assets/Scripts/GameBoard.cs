@@ -42,7 +42,6 @@ public class GameBoard : MonoBehaviour
     private SpriteRenderer _mazeSpriteRenderer;
     private bool _didIncrementLevel = false;
     private static ReplayManager _replayManager;
-    private string _playerName;
     private int _profileSlot;
 
     private const float DeathAudioLength = 1.9f;
@@ -102,8 +101,8 @@ public class GameBoard : MonoBehaviour
                 board[(int) position.x, (int) position.y] = go;
             }
         }
-        
-        
+
+        _currentLevel = PlayerPrefs.GetInt("profile" + _profileSlot + "Level");
 
         if (_currentLevel == 1)
         {
@@ -111,6 +110,8 @@ public class GameBoard : MonoBehaviour
             Pacman.Pacman.pacmanSpeed = 6;
             Ghost.ghostSpeed = 5.9f;
         }
+        
+        Debug.Log(_currentLevel);
         
         StartGame();
         
@@ -204,7 +205,7 @@ public class GameBoard : MonoBehaviour
             readyText.text = "GAME OVER!";
             readyText.color = Color.red;
             readyText.enabled = true;
-            ScoreManager.profile1Score = 0;
+            ScoreManager.score = 0;
 
             StartCoroutine(ProcessGameOver(2));
         }
@@ -293,7 +294,7 @@ public class GameBoard : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
-        SceneManager.LoadScene("GameMenu");
+        SceneManager.LoadScene("HighScores");
     }
 
     public void PlayerWon()
@@ -304,6 +305,8 @@ public class GameBoard : MonoBehaviour
         {
             _didIncrementLevel = true;
             _currentLevel++;
+            PlayerPrefs.SetInt("profile" + _profileSlot + "Level", _currentLevel);
+            PlayerPrefs.Save();
         }
 
         StartCoroutine(ProcessWin(2));

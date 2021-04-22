@@ -5,23 +5,26 @@ using UnityEngine.UI;
 public class ScoreManager: MonoBehaviour
 {
     [SerializeField] public Text scoreText;
-    public static int profile1Score;
-    private static int _profile1HighScore;
+    
+    public static int score;
+    private static int _profileHighScore;
+    private int _profileSelected;
 
     private void Start()
     {
-        _profile1HighScore = PlayerPrefs.GetInt("profile1highscore", _profile1HighScore);
+        _profileSelected = ProfileSelectMenu.profileChosen;
+        _profileHighScore = PlayerPrefs.GetInt("profile" + _profileSelected + "Highscore");
     }
 
     private void Update()
     {
-        scoreText.text = profile1Score.ToString();
+        scoreText.text = score.ToString();
         
-        if (profile1Score > _profile1HighScore)
+        if (score > _profileHighScore)
         {
-            _profile1HighScore = profile1Score;
+            _profileHighScore = score;
             
-            PlayerPrefs.SetInt("profile1highscore", _profile1HighScore);
+            PlayerPrefs.SetInt("profile" + _profileSelected + "Highscore", _profileHighScore);
             PlayerPrefs.Save();
         }
     }

@@ -962,6 +962,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   profile1ScoreText: {fileID: 74903205}
+  profile2ScoreText: {fileID: 2111308691}
+  profile3ScoreText: {fileID: 676373396}
+  profile1NameText: {fileID: 1610709177}
+  profile2NameText: {fileID: 993273748}
+  profile3NameText: {fileID: 236244948}
 --- !u!4 &1934954918
 Transform:
   m_ObjectHideFlags: 0

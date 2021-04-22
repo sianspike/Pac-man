@@ -34,7 +34,7 @@ namespace Pacman
             {
                 tileObject.GetComponent<SpriteRenderer>().enabled = false;
                 tile.consumed = true;
-                ScoreManager.profile1Score += 10;
+                ScoreManager.score += 10;
                 _pelletsConsumed++;
                 
                 _audio.PlayChompSound();

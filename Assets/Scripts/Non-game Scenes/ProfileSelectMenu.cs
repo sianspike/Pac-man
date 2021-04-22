@@ -27,7 +27,9 @@ public class ProfileSelectMenu: MonoBehaviour
                     profile1LevelText.text = PlayerPrefs.GetInt("profile1Level").ToString();
                 }
                 
-            } else if (PlayerPrefs.HasKey("profile2Name"))
+            } 
+            
+            if (PlayerPrefs.HasKey("profile2Name"))
             {
                 profile2Text.text = PlayerPrefs.GetString("profile2Name");
 
@@ -36,7 +38,9 @@ public class ProfileSelectMenu: MonoBehaviour
                     profile2LevelText.text = PlayerPrefs.GetInt("profile2Level").ToString();
                 }
 
-            } else if (PlayerPrefs.HasKey("profile3Name"))
+            }
+            
+            if (PlayerPrefs.HasKey("profile3Name"))
             {
                 profile3Text.text = PlayerPrefs.GetString("profile3Name");
 

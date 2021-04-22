@@ -20,6 +20,7 @@ public class SetName: MonoBehaviour
                 {
                         PlayerPrefs.SetString(("profile" + _profileSlot + "Name"), nameInputField.text);
                         PlayerPrefs.SetInt("profile" + _profileSlot + "Level", 1);
+                        PlayerPrefs.Save();
 
                         SceneManager.LoadScene("Level1");
                 }
