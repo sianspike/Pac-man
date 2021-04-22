@@ -8,10 +8,12 @@ public class SetName: MonoBehaviour
         [SerializeField] public InputField nameInputField;
 
         private int _profileSlot;
+        private TransitionManager _transition;
 
         private void Start()
         {
                 _profileSlot = ProfileSelectMenu.profileChosen;
+                _transition = FindObjectOfType<TransitionManager>();
         }
 
         private void Update()
@@ -22,6 +24,7 @@ public class SetName: MonoBehaviour
                         PlayerPrefs.SetInt("profile" + _profileSlot + "Level", 1);
                         PlayerPrefs.Save();
 
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("Level1");
                 }
         }

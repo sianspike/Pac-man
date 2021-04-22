@@ -12,8 +12,12 @@ public class HighScores: MonoBehaviour
         [SerializeField] public Text profile2NameText;
         [SerializeField] public Text profile3NameText;
 
+        private TransitionManager _transition;
+
         private void Start()
         {
+                _transition = FindObjectOfType<TransitionManager>();
+                
                 if (PlayerPrefs.HasKey("profile1Highscore") && PlayerPrefs.HasKey("profile1Name"))
                 {
                         profile1NameText.text = PlayerPrefs.GetString("profile1Name");
@@ -37,6 +41,7 @@ public class HighScores: MonoBehaviour
         {
                 if (Input.GetKeyUp(KeyCode.Return))
                 {
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("GameMenu");
                 }
         }

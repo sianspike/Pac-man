@@ -16,8 +16,12 @@ public class ProfileSelectMenu: MonoBehaviour
 
         public static int profileChosen;
 
+        private TransitionManager _transition;
+
         private void Start()
         {
+            _transition = FindObjectOfType<TransitionManager>();
+            
             if (PlayerPrefs.HasKey("profile1Name"))
             {
                 profile1Text.text = PlayerPrefs.GetString("profile1Name");
@@ -91,10 +95,12 @@ public class ProfileSelectMenu: MonoBehaviour
                     
                     if (PlayerPrefs.HasKey("profile1Name"))
                     {
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("Level1");
                     }
                     else
                     {
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("NewProfile");
                     }
                     
@@ -104,10 +110,12 @@ public class ProfileSelectMenu: MonoBehaviour
                     
                     if (PlayerPrefs.HasKey("profile2Name"))
                     {
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("Level1");
                     }
                     else
                     {
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("NewProfile");
                     }
                 } else if (selectorPosition.y.Equals((int) profile3Text.transform.localPosition.y))
@@ -116,14 +124,17 @@ public class ProfileSelectMenu: MonoBehaviour
                     
                     if (PlayerPrefs.HasKey("profile3Name"))
                     {
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("Level1");
                     }
                     else
                     {
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("NewProfile");
                     }
                 } else if (selectorPosition.y.Equals((int) mainMenuText.transform.localPosition.y))
                 {
+                    StartCoroutine(_transition.PlayTransition());
                     SceneManager.LoadScene("GameMenu");
                 }
             }

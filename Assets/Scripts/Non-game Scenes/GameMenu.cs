@@ -10,6 +10,13 @@ public class GameMenu: MonoBehaviour
         [SerializeField] public Text highScoreText;
         [SerializeField] public Text playerSelector;
 
+        private TransitionManager _transitionManager;
+
+        private void Start()
+        {
+                _transitionManager = FindObjectOfType<TransitionManager>();
+        }
+
         private void Update()
         {
                 SelectOption();
@@ -47,14 +54,17 @@ public class GameMenu: MonoBehaviour
                 {
                         if (playerSelectorPosition.y.Equals(playText.transform.localPosition.y))
                         {
+                                StartCoroutine(_transitionManager.PlayTransition());
                                 SceneManager.LoadScene("SelectUserProfile");
                                 
                         } else if (playerSelectorPosition.y.Equals(tutorialText.transform.localPosition.y))
                         {
+                                StartCoroutine(_transitionManager.PlayTransition());
                                 SceneManager.LoadScene("Tutorial");
                                 
                         } else if (playerSelectorPosition.y.Equals(highScoreText.transform.localPosition.y))
                         {
+                                StartCoroutine(_transitionManager.PlayTransition());
                                 SceneManager.LoadScene("HighScores");
                         }
                 }

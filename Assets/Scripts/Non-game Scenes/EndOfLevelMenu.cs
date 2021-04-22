@@ -9,6 +9,13 @@ public class EndOfLevelMenu: MonoBehaviour
         [SerializeField] public Text replayText;
         [SerializeField] public Text continueText;
 
+        private TransitionManager _transition;
+
+        private void Start()
+        {
+                _transition = FindObjectOfType<TransitionManager>();
+        }
+
         private void Update()
         {
                 var selectorPosition = selector.transform.localPosition;
@@ -31,7 +38,8 @@ public class EndOfLevelMenu: MonoBehaviour
                         {
                                 GameBoard.watchReplaySelected = true;
                         }
-                        
+
+                        StartCoroutine(_transition.PlayTransition());
                         SceneManager.LoadScene("Level1");
                 }
         }

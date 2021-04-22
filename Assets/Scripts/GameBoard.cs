@@ -13,8 +13,6 @@ using Debug = UnityEngine.Debug;
 
 public class GameBoard : MonoBehaviour
 {
-    public static GameBoard instance;
-    
     [SerializeField] public int lives = 3;
     [SerializeField] public Text playerText;
     [SerializeField] public Text readyText;
@@ -43,9 +41,11 @@ public class GameBoard : MonoBehaviour
     private bool _didIncrementLevel = false;
     private static ReplayManager _replayManager;
     private int _profileSlot;
+    private TransitionManager _transition;
 
     private const float DeathAudioLength = 1.9f;
 
+    public static GameBoard instance;
     public readonly GameObject[,] board = new GameObject[BoardWidth, BoardHeight];
     public int totalPellets = 0;
     public static bool watchReplaySelected = false;
@@ -78,6 +78,7 @@ public class GameBoard : MonoBehaviour
         _mazeSpriteRenderer = GameObject.Find("maze").GetComponent<SpriteRenderer>();
         _replayManager = GetComponent<ReplayManager>();
         _profileSlot = ProfileSelectMenu.profileChosen;
+        _transition = FindObjectOfType<TransitionManager>();
 
         var gameObjects = FindObjectsOfType(typeof(GameObject));
 
@@ -110,9 +111,7 @@ public class GameBoard : MonoBehaviour
             Pacman.Pacman.pacmanSpeed = 6;
             Ghost.ghostSpeed = 5.9f;
         }
-        
-        Debug.Log(_currentLevel);
-        
+
         StartGame();
         
     }
@@ -294,6 +293,7 @@ public class GameBoard : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
 
+        StartCoroutine(_transition.PlayTransition());
         SceneManager.LoadScene("HighScores");
     }
 
@@ -376,6 +376,7 @@ public class GameBoard : MonoBehaviour
 
     private void EndOfLevelMenu()
     {
+        StartCoroutine(_transition.PlayTransition());
         SceneManager.LoadScene("EndOfLevel");
     }
 
