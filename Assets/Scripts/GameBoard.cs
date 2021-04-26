@@ -260,9 +260,13 @@ public class GameBoard : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         
+        SetDifficultyForLevel(_currentLevel);
+        
         foreach (var ghost in _ghostObjects)
         {
-            ghost.transform.GetComponent<Ghost>().canMove = true;
+            var ghostComponent = ghost.transform.GetComponent<Ghost>();
+            ghostComponent.canMove = true;
+            ghostComponent.speed = Ghost.ghostSpeed;
         }
 
         _pacman.canMove = true;
