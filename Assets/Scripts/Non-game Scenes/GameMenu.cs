@@ -14,7 +14,7 @@ public class GameMenu: MonoBehaviour
 
         private void Start()
         {
-                //PlayerPrefs.DeleteAll();
+                PlayerPrefs.DeleteAll();
                 _transitionManager = FindObjectOfType<TransitionManager>();
         }
 

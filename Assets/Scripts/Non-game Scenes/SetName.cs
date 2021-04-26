@@ -16,6 +16,7 @@ public class SetName: MonoBehaviour
         {
                 _profileSlot = ProfileSelectMenu.profileChosen;
                 _transition = FindObjectOfType<TransitionManager>();
+                nameInputField.Select();
         }
 
         private void Update()

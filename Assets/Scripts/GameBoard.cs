@@ -39,7 +39,6 @@ public class GameBoard : MonoBehaviour
     private float _blinkIntervalTimer = 0;
     private SpriteRenderer _mazeSpriteRenderer;
     private bool _didIncrementLevel = false;
-    private static ReplayManager _replayManager;
     private int _profileSlot;
     private TransitionManager _transition;
 
@@ -76,7 +75,6 @@ public class GameBoard : MonoBehaviour
         _pacmanMove = _pacman.transform.GetComponent<PacmanMove>();
         _pacmanConsume = _pacman.GetComponent<PacmanConsume>();
         _mazeSpriteRenderer = GameObject.Find("maze").GetComponent<SpriteRenderer>();
-        _replayManager = GetComponent<ReplayManager>();
         _profileSlot = ProfileSelectMenu.profileChosen;
         _transition = FindObjectOfType<TransitionManager>();
 
@@ -102,8 +100,13 @@ public class GameBoard : MonoBehaviour
                 board[(int) position.x, (int) position.y] = go;
             }
         }
-
+        
         _currentLevel = PlayerPrefs.GetInt("profile" + _profileSlot + "Level");
+
+        if (watchReplaySelected)
+        {
+            _currentLevel--;
+        }
 
         if (_currentLevel == 1)
         {
@@ -113,7 +116,6 @@ public class GameBoard : MonoBehaviour
         }
 
         StartGame();
-        
     }
 
     private void Update()
@@ -220,15 +222,6 @@ public class GameBoard : MonoBehaviour
 
     private void StartGame()
     {
-        if (watchReplaySelected)
-        {
-            StartCoroutine(_pacmanMove.WaitUntilNextKeyPress());
-        }
-        else
-        {
-            _replayManager.StartRecording();
-        }
-
         foreach (var ghost in _ghostObjects)
         {
             ghost.transform.GetComponent<Ghost>().canMove = false;
@@ -273,6 +266,11 @@ public class GameBoard : MonoBehaviour
         readyText.enabled = false;
         _audioSource.clip = _audio.normalBackgroundAudio;
         _audioSource.Play();
+        
+        if (watchReplaySelected)
+        {
+            StartCoroutine(_pacmanMove.WaitUntilNextKeyPress());
+        }
     }
 
     private IEnumerator ShowSpritesAndRestartAfter(float delay)
@@ -303,8 +301,6 @@ public class GameBoard : MonoBehaviour
 
     public void PlayerWon()
     {
-        _replayManager.StopRecording();
-        
         if (!_didIncrementLevel)
         {
             _didIncrementLevel = true;

@@ -23,14 +23,9 @@ namespace Pacman
             targetNode = PacmanCanMove(direction);
         }
 
-        private void Update()
+        public void UpdateTimer()
         {
-            UpdateTimer();
-        }
-
-        private void UpdateTimer()
-        {
-            _keyPressTimer += Time.deltaTime;
+            _keyPressTimer = Time.deltaTime;
         }
 
         public void CheckInput()
@@ -42,7 +37,7 @@ namespace Pacman
 
                 if (!GameBoard.watchReplaySelected)
                 {
-                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.timeBetweenInputs.Add(Time.time);
                     ReplayManager.inputs.Add(KeyCode.LeftArrow);
                     _keyPressTimer = 0f;
                 }
@@ -193,7 +188,7 @@ namespace Pacman
         {
             for (var i = 0; i < ReplayManager.inputs.Count; i++)
             {
-                yield return new WaitForSeconds(ReplayManager.timeBetweenInputs[i]);
+                yield return new WaitForSeconds(ReplayManager.timeBetweenInputs[i + 1]);
 
                 _simulatedInput = ReplayManager.inputs[i];
             }
