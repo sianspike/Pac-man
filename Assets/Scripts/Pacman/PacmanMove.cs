@@ -10,7 +10,6 @@ namespace Pacman
     {
         private PacmanAnimation _animation;
         private PacmanOrientation _orientation;
-        private float _keyPressTimer = 0f;
         private KeyCode _simulatedInput;
 
         private new void Start()
@@ -23,11 +22,6 @@ namespace Pacman
             targetNode = PacmanCanMove(direction);
         }
 
-        public void UpdateTimer()
-        {
-            _keyPressTimer = Time.deltaTime;
-        }
-
         public void CheckInput()
         {
             if (Input.GetKeyDown(KeyCode.LeftArrow) || _simulatedInput == KeyCode.LeftArrow)
@@ -37,9 +31,8 @@ namespace Pacman
 
                 if (!GameBoard.watchReplaySelected)
                 {
-                    ReplayManager.timeBetweenInputs.Add(Time.time);
+                    ReplayManager.timeBetweenInputs.Add(Time.timeSinceLevelLoad);
                     ReplayManager.inputs.Add(KeyCode.LeftArrow);
-                    _keyPressTimer = 0f;
                 }
             } 
             else if (Input.GetKeyDown(KeyCode.RightArrow) || _simulatedInput == KeyCode.RightArrow)
@@ -49,9 +42,8 @@ namespace Pacman
 
                 if (!GameBoard.watchReplaySelected)
                 {
-                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.timeBetweenInputs.Add(Time.timeSinceLevelLoad);
                     ReplayManager.inputs.Add(KeyCode.RightArrow);
-                    _keyPressTimer = 0f;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.UpArrow) || _simulatedInput == KeyCode.UpArrow)
@@ -61,9 +53,8 @@ namespace Pacman
 
                 if (!GameBoard.watchReplaySelected)
                 {
-                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.timeBetweenInputs.Add(Time.timeSinceLevelLoad);
                     ReplayManager.inputs.Add(KeyCode.UpArrow);
-                    _keyPressTimer = 0f;
                 }
             }
             else if (Input.GetKeyDown(KeyCode.DownArrow) || _simulatedInput == KeyCode.DownArrow)
@@ -73,9 +64,8 @@ namespace Pacman
 
                 if (!GameBoard.watchReplaySelected)
                 {
-                    ReplayManager.timeBetweenInputs.Add(_keyPressTimer);
+                    ReplayManager.timeBetweenInputs.Add(Time.timeSinceLevelLoad);
                     ReplayManager.inputs.Add(KeyCode.DownArrow);
-                    _keyPressTimer = 0f;
                 }
             }
         }
@@ -188,8 +178,10 @@ namespace Pacman
         {
             for (var i = 0; i < ReplayManager.inputs.Count; i++)
             {
-                yield return new WaitForSeconds(ReplayManager.timeBetweenInputs[i + 1]);
-
+                var temp = i;
+                
+                yield return new WaitUntil(() => ReplayManager.timeBetweenInputs[temp] <= Time.timeSinceLevelLoad);
+                
                 _simulatedInput = ReplayManager.inputs[i];
             }
         }

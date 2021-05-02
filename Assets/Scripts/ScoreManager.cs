@@ -14,18 +14,26 @@ public class ScoreManager: MonoBehaviour
     {
         _profileSelected = ProfileSelectMenu.profileChosen;
         _profileHighScore = PlayerPrefs.GetInt("profile" + _profileSelected + "Highscore");
+
+        if (GameBoard.watchReplaySelected)
+        {
+            score = 0;
+        }
     }
 
     private void Update()
     {
         scoreText.text = score.ToString();
         
-        if (score > _profileHighScore)
+        if (!GameBoard.watchReplaySelected)
         {
-            _profileHighScore = score;
+            if (score > _profileHighScore)
+            {
+                _profileHighScore = score;
             
-            PlayerPrefs.SetInt("profile" + _profileSelected + "Highscore", _profileHighScore);
-            PlayerPrefs.Save();
+                PlayerPrefs.SetInt("profile" + _profileSelected + "Highscore", _profileHighScore);
+                PlayerPrefs.Save();
+            }
         }
     }
 }

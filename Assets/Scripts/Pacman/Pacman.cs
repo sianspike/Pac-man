@@ -28,22 +28,13 @@ namespace Pacman
             if (canMove)
             {
                 _pacmanMovement.CheckInput();
-                _pacmanMovement.UpdateTimer();
                 _pacmanMovement.MoveSprite();
                 _pacmanOrientation.UpdateOrientation(_pacmanMovement.direction);
                 _animation.UpdateAnimation(_pacmanMovement.direction);
                 _pacmanConsume.ConsumePellet();
             }
         }
-
-        // private void FixedUpdate()
-        // {
-        //     if (canMove)
-        //     {
-        //         _pacmanMovement.UpdateTimer();
-        //     }
-        // }
-
+        
         public void Restart()
         {
             canMove = true;
